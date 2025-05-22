@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienbedarfsrechner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"], select {
+            width: calc(100% - 22px); /* Account for padding and border */
+            padding: 10px;
+            margin-bottom: 5px; /* Reduced margin for error message placement */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        .gender-options {
+            margin-bottom: 5px; /* Reduced margin */
+            display: flex;
+            align-items: center;
+        }
+        .gender-options label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .gender-options input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #3498db;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #eaf6ff;
+            border: 1px solid #b3d7f0;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            color: #2c3e50;
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85em;
+            margin-top: 2px;
+            margin-bottom: 10px;
+            height: 1em; /* Reserve space to prevent layout shifts */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalorienbedarfsrechner</h1>
+
+        <label for="age">Alter (Jahre):</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        <div id="ageError" class="error-message"></div>
+
+        <label>Geschlecht:</label>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Männlich</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Weiblich</label>
+        </div>
+        <div id="genderError" class="error-message"></div> <!-- Though radio has default -->
+
+        <label for="weight">Gewicht (kg):</label>
+        <input type="number" id="weight" name="weight" step="0.1" min="1" max="500">
+        <div id="weightError" class="error-message"></div>
+
+        <label for="height">Größe (cm):</label>
+        <input type="number" id="height" name="height" min="50" max="300">
+        <div id="heightError" class="error-message"></div>
+
+        <label for="activity">Aktivitätsniveau:</label>
+        <select id="activity" name="activity">
+            <option value="1.2">Wenig/keine Aktivität (Bürojob)</option>
+            <option value="1.375">Leichte Aktivität (1-3 Tage/Woche Sport)</option>
+            <option value="1.55">Mäßige Aktivität (3-5 Tage/Woche Sport)</option>
+            <option value="1.725">Hohe Aktivität (6-7 Tage/Woche Sport)</option>
+            <option value="1.9">Sehr hohe Aktivität (Profisportler, harte körperliche Arbeit)</option>
+        </select>
+        <div id="activityError" class="error-message"></div> <!-- For select, though usually not needed -->
+
+
+        <button type="button" onclick="calculateCalories()">Bedarf berechnen</button>
+
+        <div id="result" style="display: none;"></div>
+        <a  class ='back-button' href="index.html">Zurück</a>
+    </div>
+
+    <script>
+        function validateField(value, min, max, errorElementId, fieldName) {
+            const errorElement = document.getElementById(errorElementId);
+            errorElement.textContent = ''; // Clear previous error
+            const numValue = parseFloat(value);
+
+            if (value.trim() === '') {
+                errorElement.textContent = `${fieldName} darf nicht leer sein.`;
+                return false;
+            }
+            if (isNaN(numValue)) {
+                errorElement.textContent = `Bitte geben Sie eine gültige Zahl für ${fieldName} ein.`;
+                return false;
+            }
+            if (numValue < min || numValue > max) {
+                errorElement.textContent = `${fieldName} muss zwischen ${min} und ${max} liegen.`;
+                return false;
+            }
+            return true;
+        }
+
+        function calculateCalories() {
+            // Clear previous result and errors
+            document.getElementById('result').textContent = '';
+            document.getElementById('result').style.display = 'none';
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+            const ageInput = document.getElementById('age');
+            const weightInput = document.getElementById('weight');
+            const heightInput = document.getElementById('height');
+
+            let isValid = true;
+            if (!validateField(ageInput.value, 1, 120, 'ageError', 'Alter')) isValid = false;
+            if (!validateField(weightInput.value, 1, 500, 'weightError', 'Gewicht')) isValid = false;
+            if (!validateField(heightInput.value, 50, 300, 'heightError', 'Größe')) isValid = false;
+
+            if (!isValid) {
+                return;
+            }
+
+            const age = parseFloat(ageInput.value);
+            const weight = parseFloat(weightInput.value);
+            const height = parseFloat(heightInput.value);
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const activityLevel = parseFloat(document.getElementById('activity').value);
+
+            let bmr; // Grundumsatz (Basal Metabolic Rate)
+
+            // Mifflin-St Jeor Formel
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else { // female
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+
+            if (isNaN(bmr) || bmr <= 0) {
+                const resultDiv = document.getElementById('result');
+                resultDiv.textContent = 'Fehler bei der BMR-Berechnung. Bitte überprüfen Sie Ihre Eingaben.';
+                resultDiv.style.display = 'block';
+                resultDiv.style.backgroundColor = '#ffebee'; // Light red for error
+                resultDiv.style.borderColor = '#e57373';
+                resultDiv.style.color = '#c62828';
+                return;
+            }
+
+            const totalCalories = bmr * activityLevel;
+            const overshootcalories = totalCalories + 200; // 10% Überschuss
+
+            const resultDiv = document.getElementById('result');
+            if (isNaN(totalCalories) || totalCalories <= 0) {
+                resultDiv.textContent = 'Kalorienbedarf konnte nicht berechnet werden. Überprüfen Sie Ihre Eingaben.';
+                resultDiv.style.backgroundColor = '#ffebee';
+                resultDiv.style.borderColor = '#e57373';
+                resultDiv.style.color = '#c62828';
+            } else {
+                resultDiv.innerHTML = `Ihr täglicher Kalorienbedarf beträgt: ${totalCalories.toFixed(0)} Kalorien.<br>Mit Trainingsüberschuss: ${overshootcalories.toFixed(0)} Kalorien.`;
+                
+                resultDiv.style.backgroundColor = '#eaf6ff'; // Default success background
+                resultDiv.style.borderColor = '#b3d7f0';
+                resultDiv.style.color = '#2c3e50';
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -3,218 +3,606 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalorienbedarfsrechner</title>
+    <title>Trainingsplan Gestalter</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="number"], select {
-            width: calc(100% - 22px); /* Account for padding and border */
-            padding: 10px;
-            margin-bottom: 5px; /* Reduced margin for error message placement */
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 1em;
-        }
-        .gender-options {
-            margin-bottom: 5px; /* Reduced margin */
-            display: flex;
-            align-items: center;
-        }
-        .gender-options label {
-            margin-right: 15px;
-            font-weight: normal;
-        }
-        .gender-options input[type="radio"] {
-            margin-right: 5px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            width: 100%;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        #result {
-            margin-top: 25px;
-            padding: 15px;
-            background-color: #eaf6ff;
-            border: 1px solid #b3d7f0;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-align: center;
-            color: #2c3e50;
-        }
-        .error-message {
-            color: #e74c3c;
-            font-size: 0.85em;
-            margin-top: 2px;
-            margin-bottom: 10px;
-            height: 1em; /* Reserve space to prevent layout shifts */
-        }
+       body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow: auto;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #2c3e50;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    text-decoration: underline;
+}
+
+.content-section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.content-section h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    min-height: 50px;
+}
+
+.item {
+    background-color: #3498db;
+    padding: 10px 15px;
+    border: 1px solid #2980b9;
+    color: #fff;
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.item:hover {
+    background-color: #2980b9;
+}
+
+.item:active {
+    cursor: grabbing;
+    background-color: #2471a3;
+}
+
+.item .details-btn {
+    padding: 4px 8px;
+    font-size: 0.85em;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.item .details-btn:hover {
+    background-color: #1a242f;
+}
+
+#trainingsplan-bereich .plan-tag {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+#trainingsplan-bereich .plan-tag h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.plan-area {
+    min-height: 80px;
+    padding: 10px;
+    border: 2px dashed #3498db;
+    margin-top: 10px;
+    background-color: #e8f4fb;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-content: flex-start;
+}
+
+.plan-area.drag-over {
+    border-style: solid;
+    border-color: #2980b9;
+    background-color: #d6eaf8;
+}
+
+.planned-item {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.planned-item.recipe-planned {
+    background-color: #5dade2;
+    border-color: #3498db;
+    color: #fff;
+}
+
+.planned-item.exercise-planned {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+    color: #fff;
+}
+
+.planned-item .remove-btn {
+    margin-left: 10px;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.planned-item .remove-btn:hover {
+    background-color: #f1b0b7;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 85%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-content h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Responsive Nav */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
     </style>
 </head>
 <body>
+    <header>
+        <h1>Mein Trainings- und Ernährungsplaner</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#uebungen-bereich">Übungen</a></li>
+            <li><a href="#rezepte-bereich">Rezepte</a></li>
+            <li><a href="#trainingsplan-bereich">Mein Plan</a></li>
+            <li><a href="kalorienrechner.html">Kalorienrechner</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <h1>Kalorienbedarfsrechner</h1>
+        <section id="uebungen-bereich" class="content-section">
+            <h2>Verfügbare Übungen</h2>
+            <div class="item-list" id="verfuegbare-uebungen">
+                <div class="item" draggable="true" id="uebung-1" data-type="exercise"><span class="item-name">Liegestütze (3 Sätze x 10 Wdh.)</span></div>
+                <div class="item" draggable="true" id="uebung-2" data-type="exercise"><span class="item-name">Kniebeugen (3 Sätze x 12 Wdh.)</span></div>
+                <div class="item" draggable="true" id="uebung-3" data-type="exercise"><span class="item-name">Plank (3 Sätze x 30 Sek.)</span></div>
+                <div class="item" draggable="true" id="uebung-4" data-type="exercise"><span class="item-name">Ausfallschritte (3 Sätze x 10 Wdh. pro Bein)</span></div>
+                <div class="item" draggable="true" id="uebung-5" data-type="exercise"><span class="item-name">Rudern mit Kurzhanteln (3 Sätze x 10 Wdh.)</span></div>
+            </div>
+        </section>
 
-        <label for="age">Alter (Jahre):</label>
-        <input type="number" id="age" name="age" min="1" max="120">
-        <div id="ageError" class="error-message"></div>
+        <section id="rezepte-bereich" class="content-section">
+            <h2>Verfügbare Rezepte</h2>
+            <div class="item-list" id="verfuegbare-rezepte">
+                <div class="item" draggable="true" id="rezept-1" data-type="recipe"
+                     data-name="Protein-Shake (Banane, Whey)"
+                     data-preparation="1. Banane schälen und in Stücke brechen.
+2. Zusammen mit Whey Protein Pulver und 250ml Milch (oder Wasser/Pflanzendrink) in einen Mixer geben.
+3. Für ca. 30-60 Sekunden mixen, bis der Shake schön cremig ist. Sofort genießen."
+                     data-nutrition="Pro Portion (ca.):
+Kalorien: 350 kcal
+Protein: 30g
+Kohlenhydrate: 40g
+Fett: 8g (variiert je nach Zutaten)">
+                    <span class="item-name">Protein-Shake (Banane, Whey)</span>
+                    <button class="details-btn" type="button">Details</button>
+                </div>
+                <div class="item" draggable="true" id="rezept-2" data-type="recipe"
+                     data-name="Hähnchenbrust mit Gemüse und Reis"
+                     data-preparation="1. Hähnchenbrust würzen und in der Pfanne anbraten oder im Ofen garen.
+2. Gemüse (z.B. Brokkoli, Paprika, Zucchini) dämpfen oder anbraten.
+3. Reis nach Packungsanweisung kochen.
+4. Alles zusammen anrichten."
+                     data-nutrition="Pro Portion (ca.):
+Kalorien: 500 kcal
+Protein: 45g
+Kohlenhydrate: 55g
+Fett: 10g">
+                    <span class="item-name">Hähnchenbrust mit Gemüse und Reis</span>
+                    <button class="details-btn" type="button">Details</button>
+                </div>
+                <div class="item" draggable="true" id="rezept-3" data-type="recipe"
+                     data-name="Quark mit Früchten und Nüssen"
+                     data-preparation="1. Magerquark (ca. 250g) in eine Schüssel geben.
+2. Mit frischen oder gefrorenen Beeren (ca. 100g) garnieren.
+3. Eine kleine Handvoll Nüsse (z.B. Mandeln, Walnüsse, ca. 20g) darüber streuen.
+4. Optional: Mit etwas Honig oder Agavendicksaft süßen."
+                     data-nutrition="Pro Portion (ca.):
+Kalorien: 380 kcal
+Protein: 35g
+Kohlenhydrate: 30g
+Fett: 15g">
+                    <span class="item-name">Quark mit Früchten und Nüssen</span>
+                    <button class="details-btn" type="button">Details</button>
+                </div>
+                <div class="item" draggable="true" id="rezept-4" data-type="recipe"
+                     data-name="Vollkornbrot mit Avocado und Ei"
+                     data-preparation="1. Zwei Scheiben Vollkornbrot toasten.
+2. Eine halbe reife Avocado zerdrücken und auf den Brotscheiben verteilen. Mit Salz und Pfeffer würzen.
+3. Ein bis zwei Eier als Spiegelei braten oder kochen und auf die Avocado legen."
+                     data-nutrition="Pro Portion (ca.):
+Kalorien: 420 kcal
+Protein: 18g
+Kohlenhydrate: 35g
+Fett: 22g">
+                    <span class="item-name">Vollkornbrot mit Avocado und Ei</span>
+                    <button class="details-btn" type="button">Details</button>
+                </div>
+                <div class="item" draggable="true" id="rezept-5" data-type="recipe"
+                     data-name="Linsensuppe"
+                     data-preparation="1. Zwiebel und Knoblauch klein schneiden und in etwas Öl andünsten.
+2. Karotten, Sellerie und Lauch würfeln und kurz mitdünsten.
+3. Rote oder braune Linsen (ca. 150g) hinzufügen, mit Gemüsebrühe ablöschen und ca. 20-25 Minuten köcheln lassen, bis die Linsen weich sind.
+4. Mit Salz, Pfeffer und ggf. etwas Essig abschmecken."
+                     data-nutrition="Pro Portion (ca.):
+Kalorien: 320 kcal
+Protein: 18g
+Kohlenhydrate: 50g
+Fett: 5g">
+                    <span class="item-name">Linsensuppe</span>
+                    <button class="details-btn" type="button">Details</button>
+                </div>
+            </div>
+        </section>
 
-        <label>Geschlecht:</label>
-        <div class="gender-options">
-            <input type="radio" id="male" name="gender" value="male" checked>
-            <label for="male">Männlich</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Weiblich</label>
-        </div>
-        <div id="genderError" class="error-message"></div> <!-- Though radio has default -->
-
-        <label for="weight">Gewicht (kg):</label>
-        <input type="number" id="weight" name="weight" step="0.1" min="1" max="500">
-        <div id="weightError" class="error-message"></div>
-
-        <label for="height">Größe (cm):</label>
-        <input type="number" id="height" name="height" min="50" max="300">
-        <div id="heightError" class="error-message"></div>
-
-        <label for="activity">Aktivitätsniveau:</label>
-        <select id="activity" name="activity">
-            <option value="1.2">Wenig/keine Aktivität (Bürojob)</option>
-            <option value="1.375">Leichte Aktivität (1-3 Tage/Woche Sport)</option>
-            <option value="1.55">Mäßige Aktivität (3-5 Tage/Woche Sport)</option>
-            <option value="1.725">Hohe Aktivität (6-7 Tage/Woche Sport)</option>
-            <option value="1.9">Sehr hohe Aktivität (Profisportler, harte körperliche Arbeit)</option>
-        </select>
-        <div id="activityError" class="error-message"></div> <!-- For select, though usually not needed -->
-
-
-        <button type="button" onclick="calculateCalories()">Bedarf berechnen</button>
-
-        <div id="result" style="display: none;"></div>
+        <section id="trainingsplan-bereich" class="content-section">
+            <h2>Mein Wochenplan</h2>
+            <p>Ziehe Übungen und Rezepte per Drag & Drop in die gewünschten Tage.</p>
+            
+            <div class="plan-tag" id="montag">
+                <h3>Montag</h3>
+                <div class="plan-area" data-tag="montag"></div>
+            </div>
+            <div class="plan-tag" id="dienstag">
+                <h3>Dienstag</h3>
+                <div class="plan-area" data-tag="dienstag"></div>
+            </div>
+            <div class="plan-tag" id="mittwoch">
+                <h3>Mittwoch</h3>
+                <div class="plan-area" data-tag="mittwoch"></div>
+            </div>
+            <div class="plan-tag" id="donnerstag">
+                <h3>Donnerstag</h3>
+                <div class="plan-area" data-tag="donnerstag"></div>
+            </div>
+            <div class="plan-tag" id="freitag">
+                <h3>Freitag</h3>
+                <div class="plan-area" data-tag="freitag"></div>
+            </div>
+            <div class="plan-tag" id="samstag">
+                <h3>Samstag</h3>
+                <div class="plan-area" data-tag="samstag"></div>
+            </div>
+            <div class="plan-tag" id="sonntag">
+                <h3>Sonntag</h3>
+                <div class="plan-area" data-tag="sonntag"></div>
+            </div>
+        </section>
     </div>
 
+    <!-- Recipe Detail Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalRecipeName">Rezeptname</h3>
+            <h4>Zubereitung:</h4>
+            <p id="modalRecipePreparation">Zubereitungsschritte...</p>
+            <h4>Nährwerte:</h4>
+            <p id="modalRecipeNutrition">Nährwertangaben...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dein Trainingsplaner. Alle Rechte vorbehalten.</p>
+    </footer>
+
     <script>
-        function validateField(value, min, max, errorElementId, fieldName) {
-            const errorElement = document.getElementById(errorElementId);
-            errorElement.textContent = ''; // Clear previous error
-            const numValue = parseFloat(value);
+        document.addEventListener('DOMContentLoaded', () => {
+            const draggableItems = document.querySelectorAll('.item[draggable="true"]');
+            const planAreas = document.querySelectorAll('.plan-area');
+            let draggedItem = null;
 
-            if (value.trim() === '') {
-                errorElement.textContent = `${fieldName} darf nicht leer sein.`;
-                return false;
-            }
-            if (isNaN(numValue)) {
-                errorElement.textContent = `Bitte geben Sie eine gültige Zahl für ${fieldName} ein.`;
-                return false;
-            }
-            if (numValue < min || numValue > max) {
-                errorElement.textContent = `${fieldName} muss zwischen ${min} und ${max} liegen.`;
-                return false;
-            }
-            return true;
-        }
-
-        function calculateCalories() {
-            // Clear previous result and errors
-            document.getElementById('result').textContent = '';
-            document.getElementById('result').style.display = 'none';
-            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-
-            const ageInput = document.getElementById('age');
-            const weightInput = document.getElementById('weight');
-            const heightInput = document.getElementById('height');
-
-            let isValid = true;
-            if (!validateField(ageInput.value, 1, 120, 'ageError', 'Alter')) isValid = false;
-            if (!validateField(weightInput.value, 1, 500, 'weightError', 'Gewicht')) isValid = false;
-            if (!validateField(heightInput.value, 50, 300, 'heightError', 'Größe')) isValid = false;
-
-            if (!isValid) {
-                return;
+            // --- Persistence Functions ---
+            function savePlan() {
+                const planData = {};
+                document.querySelectorAll('.plan-tag').forEach(tagElement => {
+                    const day = tagElement.id; // e.g., 'montag'
+                    const planArea = tagElement.querySelector('.plan-area');
+                    const items = [];
+                    planArea.querySelectorAll('.planned-item').forEach(itemElement => {
+                        const itemName = itemElement.childNodes[0].nodeValue.trim(); // Text node is the first child
+                        const itemType = itemElement.dataset.itemType;
+                        if (itemName && itemType) {
+                            items.push({ name: itemName, type: itemType });
+                        }
+                    });
+                    planData[day] = items;
+                });
+                localStorage.setItem('meinWochenplan', JSON.stringify(planData));
             }
 
-            const age = parseFloat(ageInput.value);
-            const weight = parseFloat(weightInput.value);
-            const height = parseFloat(heightInput.value);
-            const gender = document.querySelector('input[name="gender"]:checked').value;
-            const activityLevel = parseFloat(document.getElementById('activity').value);
+            function createPlannedItemElement(itemData) {
+                const plannedItemDiv = document.createElement('div');
+                plannedItemDiv.classList.add('planned-item');
+                plannedItemDiv.dataset.itemType = itemData.type;
 
-            let bmr; // Grundumsatz (Basal Metabolic Rate)
-
-            // Mifflin-St Jeor Formel
-            if (gender === 'male') {
-                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-            } else { // female
-                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-            }
-
-            if (isNaN(bmr) || bmr <= 0) {
-                const resultDiv = document.getElementById('result');
-                resultDiv.textContent = 'Fehler bei der BMR-Berechnung. Bitte überprüfen Sie Ihre Eingaben.';
-                resultDiv.style.display = 'block';
-                resultDiv.style.backgroundColor = '#ffebee'; // Light red for error
-                resultDiv.style.borderColor = '#e57373';
-                resultDiv.style.color = '#c62828';
-                return;
-            }
-
-            const totalCalories = bmr * activityLevel;
-            const overshootcalories = totalCalories + 200; // 10% Überschuss
-
-            const resultDiv = document.getElementById('result');
-            if (isNaN(totalCalories) || totalCalories <= 0) {
-                resultDiv.textContent = 'Kalorienbedarf konnte nicht berechnet werden. Überprüfen Sie Ihre Eingaben.';
-                resultDiv.style.backgroundColor = '#ffebee';
-                resultDiv.style.borderColor = '#e57373';
-                resultDiv.style.color = '#c62828';
-            } else {
-                resultDiv.textContent = `Ihr täglicher Kalorienbedarf beträgt: ${totalCalories.toFixed(0)} Kalorien.\nmit Trainigsüberschuss: ${overshootcalories.toFixed(0)} Kalorien.`;
+                if (itemData.type === 'recipe') {
+                    plannedItemDiv.classList.add('recipe-planned');
+                } else if (itemData.type === 'exercise') {
+                    plannedItemDiv.classList.add('exercise-planned');
+                }
                 
-                resultDiv.style.backgroundColor = '#eaf6ff'; // Default success background
-                resultDiv.style.borderColor = '#b3d7f0';
-                resultDiv.style.color = '#2c3e50';
+                const itemNameTextNode = document.createTextNode(itemData.name);
+                plannedItemDiv.appendChild(itemNameTextNode);
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'x';
+                removeButton.className = 'remove-btn';
+                removeButton.title = 'Aus Plan entfernen';
+                removeButton.onclick = function() {
+                    plannedItemDiv.remove();
+                    savePlan(); 
+                };
+                plannedItemDiv.appendChild(removeButton);
+                return plannedItemDiv;
             }
-            resultDiv.style.display = 'block';
-        }
+
+            function loadPlan() {
+                const savedPlan = localStorage.getItem('meinWochenplan');
+                if (savedPlan) {
+                    try {
+                        const planData = JSON.parse(savedPlan);
+                        for (const day in planData) {
+                            const planArea = document.querySelector(`#${day} .plan-area`);
+                            if (planArea) {
+                                planArea.innerHTML = ''; // Clear existing items before loading
+                                planData[day].forEach(itemData => {
+                                    if (itemData && typeof itemData.name === 'string' && typeof itemData.type === 'string') {
+                                        const plannedItemElement = createPlannedItemElement(itemData);
+                                        planArea.appendChild(plannedItemElement);
+                                    }
+                                });
+                            }
+                        }
+                    } catch (error) {
+                        console.error("Fehler beim Laden des Plans aus localStorage:", error);
+                        // Optional: Clear corrupted data
+                        // localStorage.removeItem('meinWochenplan');
+                    }
+                }
+            }
+
+            // --- Drag and Drop Logic ---
+            draggableItems.forEach(item => {
+                item.addEventListener('dragstart', (e) => {
+                    draggedItem = item;
+                    const itemName = item.dataset.name || item.querySelector('.item-name')?.textContent || item.id;
+                    e.dataTransfer.setData('text/plain', itemName);
+                });
+
+                item.addEventListener('dragend', () => {
+                    draggedItem = null; 
+                });
+            });
+
+            planAreas.forEach(area => {
+                area.addEventListener('dragover', (e) => {
+                    e.preventDefault(); 
+                    area.classList.add('drag-over');
+                });
+
+                area.addEventListener('dragleave', () => {
+                    area.classList.remove('drag-over');
+                });
+
+                area.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    area.classList.remove('drag-over');
+                    if (draggedItem) {
+                        const itemName = draggedItem.dataset.name || draggedItem.querySelector('.item-name')?.textContent || draggedItem.id;
+                        const itemType = draggedItem.dataset.type; // 'recipe' or 'exercise'
+                        
+                        if (itemName && itemType) {
+                            const itemData = { name: itemName.trim(), type: itemType };
+                            const plannedItemElement = createPlannedItemElement(itemData);
+                            area.appendChild(plannedItemElement);
+                            savePlan(); 
+                        }
+                    }
+                });
+            });
+
+            // --- Recipe Modal Logic ---
+            const modal = document.getElementById('recipeModal');
+            const modalRecipeName = document.getElementById('modalRecipeName');
+            const modalRecipePreparation = document.getElementById('modalRecipePreparation');
+            const modalRecipeNutrition = document.getElementById('modalRecipeNutrition');
+            const closeButton = modal.querySelector('.close-button');
+
+            function openRecipeModal(name, preparation, nutrition) {
+                modalRecipeName.textContent = name;
+                modalRecipePreparation.textContent = preparation;
+                modalRecipeNutrition.textContent = nutrition;
+                modal.style.display = 'block';
+            }
+
+            function closeRecipeModal() {
+                modal.style.display = 'none';
+            }
+
+            if (closeButton) {
+                closeButton.onclick = closeRecipeModal;
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeRecipeModal();
+                }
+            }
+
+            document.querySelectorAll('#verfuegbare-rezepte .item[data-type="recipe"]').forEach(recipeItem => {
+                const detailsButton = recipeItem.querySelector('.details-btn');
+                if (detailsButton) {
+                    detailsButton.addEventListener('click', (e) => {
+                        e.stopPropagation(); 
+                        const name = recipeItem.dataset.name;
+                        const preparation = recipeItem.dataset.preparation;
+                        const nutrition = recipeItem.dataset.nutrition;
+                        openRecipeModal(name, preparation, nutrition);
+                    });
+                }
+            });
+            
+            // Ensure exercises also have item-name span if they don't have buttons, for consistency
+            document.querySelectorAll('#verfuegbare-uebungen .item[data-type="exercise"]').forEach(exerciseItem => {
+                if (!exerciseItem.querySelector('.item-name')) {
+                    const originalText = exerciseItem.textContent.trim();
+                    exerciseItem.innerHTML = ''; 
+                    const span = document.createElement('span');
+                    span.className = 'item-name';
+                    span.textContent = originalText;
+                    exerciseItem.appendChild(span);
+                }
+            });
+
+            // --- Initial Load ---
+            loadPlan();
+        });
     </script>
+
 </body>
 </html>
-git remote add origin https://github.com/Clemens-Helling/Kalorienrechner.git
- -->
