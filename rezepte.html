@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezeptübersicht</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #007BFF; }
+        .rezept { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>Rezepte verwalten</h1>
+
+<div id="rezepteContainer"></div>
+
+<script>
+    const rezepte = [
+        { name: "Haferflocken mit Banane", kalorien: 350, eiweiß: 10, fett: 5, kohlenhydrate: 60 },
+        { name: "Gemüsepfanne mit Reis", kalorien: 400, eiweiß: 8, fett: 10, kohlenhydrate: 70 },
+        { name: "Putenbrust mit Brokkoli", kalorien: 300, eiweiß: 35, fett: 5, kohlenhydrate: 10 }
+    ];
+
+    const tage = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
+
+    function ladeRezepte() {
+        const container = document.getElementById("rezepteContainer");
+        container.innerHTML = "";
+
+        rezepte.forEach(rezept => {
+            const div = document.createElement("div");
+            div.className = "rezept";
+
+            div.innerHTML = `<strong>${rezept.name}</strong><br>` +
+                            `Kalorien: ${rezept.kalorien} kcal<br>` +
+                            `Eiweiß: ${rezept.eiweiß} g<br>` +
+                            `Fett: ${rezept.fett} g<br>` +
+                            `Kohlenhydrate: ${rezept.kohlenhydrate} g<br>`;
+
+            const select = document.createElement("select");
+            tage.forEach(tag => {
+                const option = document.createElement("option");
+                option.value = tag;
+                option.text = tag;
+                select.appendChild(option);
+            });
+
+            const button = document.createElement("button");
+            button.textContent = "Tag zuordnen";
+            button.onclick = () => zuordnen(rezept, select.value);
+
+            div.appendChild(select);
+            div.appendChild(button);
+
+            container.appendChild(div);
+        });
+    }
+
+    function zuordnen(rezept, tag) {
+        let zuordnungen = JSON.parse(localStorage.getItem("zuordnungen")) || {};
+        if (!zuordnungen[tag]) zuordnungen[tag] = [];
+        if (!zuordnungen[tag].some(r => r.name === rezept.name)) {
+            zuordnungen[tag].push(rezept);
+            localStorage.setItem("zuordnungen", JSON.stringify(zuordnungen));
+            alert(`${rezept.name} wurde ${tag} zugeordnet.`);
+        } else {
+            alert(`${rezept.name} ist dem ${tag} schon zugeordnet.`);
+        }
+    }
+
+    ladeRezepte();
+</script>
+
+</body>
+</html>
