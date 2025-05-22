@@ -196,6 +196,7 @@
             }
 
             const totalCalories = bmr * activityLevel;
+            const overshootcalories = totalCalories + 200; // 10% Überschuss
 
             const resultDiv = document.getElementById('result');
             if (isNaN(totalCalories) || totalCalories <= 0) {
@@ -205,6 +206,7 @@
                 resultDiv.style.color = '#c62828';
             } else {
                 resultDiv.textContent = `Ihr täglicher Kalorienbedarf beträgt: ${totalCalories.toFixed(0)} Kalorien.`;
+                resultDiv.textContent += `\nmit Trainigsüberschuss: ${overshootcalories.toFixed(0)} Kalorien.`;
                 resultDiv.style.backgroundColor = '#eaf6ff'; // Default success background
                 resultDiv.style.borderColor = '#b3d7f0';
                 resultDiv.style.color = '#2c3e50';
@@ -214,3 +216,5 @@
     </script>
 </body>
 </html>
+git remote add origin https://github.com/Clemens-Helling/Kalorienrechner.git
+ -->
