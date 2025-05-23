@@ -246,6 +246,15 @@ nav ul li a:hover, nav ul li a.active {
     white-space: pre-line;
 }
 
+.modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.modal-content ul li {
+    margin-bottom: 5px;
+}
+
+
 .close-button {
     color: #aaa;
     float: right;
@@ -297,85 +306,14 @@ footer {
         <section id="uebungen-bereich" class="content-section">
             <h2>Verfügbare Übungen</h2>
             <div class="item-list" id="verfuegbare-uebungen">
-                <div class="item" draggable="true" id="uebung-1" data-type="exercise"><span class="item-name">Liegestütze (3 Sätze x 10 Wdh.)</span></div>
-                <div class="item" draggable="true" id="uebung-2" data-type="exercise"><span class="item-name">Kniebeugen (3 Sätze x 12 Wdh.)</span></div>
-                <div class="item" draggable="true" id="uebung-3" data-type="exercise"><span class="item-name">Plank (3 Sätze x 30 Sek.)</span></div>
-                <div class="item" draggable="true" id="uebung-4" data-type="exercise"><span class="item-name">Ausfallschritte (3 Sätze x 10 Wdh. pro Bein)</span></div>
-                <div class="item" draggable="true" id="uebung-5" data-type="exercise"><span class="item-name">Rudern mit Kurzhanteln (3 Sätze x 10 Wdh.)</span></div>
+                <!-- Übungen werden hier per JavaScript geladen -->
             </div>
         </section>
 
         <section id="rezepte-bereich" class="content-section">
             <h2>Verfügbare Rezepte</h2>
             <div class="item-list" id="verfuegbare-rezepte">
-                <div class="item" draggable="true" id="rezept-1" data-type="recipe"
-                     data-name="Protein-Shake (Banane, Whey)"
-                     data-preparation="1. Banane schälen und in Stücke brechen.
-2. Zusammen mit Whey Protein Pulver und 250ml Milch (oder Wasser/Pflanzendrink) in einen Mixer geben.
-3. Für ca. 30-60 Sekunden mixen, bis der Shake schön cremig ist. Sofort genießen."
-                     data-nutrition="Pro Portion (ca.):
-Kalorien: 350 kcal
-Protein: 30g
-Kohlenhydrate: 40g
-Fett: 8g (variiert je nach Zutaten)">
-                    <span class="item-name">Protein-Shake (Banane, Whey)</span>
-                    <button class="details-btn" type="button">Details</button>
-                </div>
-                <div class="item" draggable="true" id="rezept-2" data-type="recipe"
-                     data-name="Hähnchenbrust mit Gemüse und Reis"
-                     data-preparation="1. Hähnchenbrust würzen und in der Pfanne anbraten oder im Ofen garen.
-2. Gemüse (z.B. Brokkoli, Paprika, Zucchini) dämpfen oder anbraten.
-3. Reis nach Packungsanweisung kochen.
-4. Alles zusammen anrichten."
-                     data-nutrition="Pro Portion (ca.):
-Kalorien: 500 kcal
-Protein: 45g
-Kohlenhydrate: 55g
-Fett: 10g">
-                    <span class="item-name">Hähnchenbrust mit Gemüse und Reis</span>
-                    <button class="details-btn" type="button">Details</button>
-                </div>
-                <div class="item" draggable="true" id="rezept-3" data-type="recipe"
-                     data-name="Quark mit Früchten und Nüssen"
-                     data-preparation="1. Magerquark (ca. 250g) in eine Schüssel geben.
-2. Mit frischen oder gefrorenen Beeren (ca. 100g) garnieren.
-3. Eine kleine Handvoll Nüsse (z.B. Mandeln, Walnüsse, ca. 20g) darüber streuen.
-4. Optional: Mit etwas Honig oder Agavendicksaft süßen."
-                     data-nutrition="Pro Portion (ca.):
-Kalorien: 380 kcal
-Protein: 35g
-Kohlenhydrate: 30g
-Fett: 15g">
-                    <span class="item-name">Quark mit Früchten und Nüssen</span>
-                    <button class="details-btn" type="button">Details</button>
-                </div>
-                <div class="item" draggable="true" id="rezept-4" data-type="recipe"
-                     data-name="Vollkornbrot mit Avocado und Ei"
-                     data-preparation="1. Zwei Scheiben Vollkornbrot toasten.
-2. Eine halbe reife Avocado zerdrücken und auf den Brotscheiben verteilen. Mit Salz und Pfeffer würzen.
-3. Ein bis zwei Eier als Spiegelei braten oder kochen und auf die Avocado legen."
-                     data-nutrition="Pro Portion (ca.):
-Kalorien: 420 kcal
-Protein: 18g
-Kohlenhydrate: 35g
-Fett: 22g">
-                    <span class="item-name">Vollkornbrot mit Avocado und Ei</span>
-                    <button class="details-btn" type="button">Details</button>
-                </div>
-                <div class="item" draggable="true" id="rezept-5" data-type="recipe"
-                     data-name="Linsensuppe"
-                     data-preparation="1. Zwiebel und Knoblauch klein schneiden und in etwas Öl andünsten.
-2. Karotten, Sellerie und Lauch würfeln und kurz mitdünsten.
-3. Rote oder braune Linsen (ca. 150g) hinzufügen, mit Gemüsebrühe ablöschen und ca. 20-25 Minuten köcheln lassen, bis die Linsen weich sind.
-4. Mit Salz, Pfeffer und ggf. etwas Essig abschmecken."
-                     data-nutrition="Pro Portion (ca.):
-Kalorien: 320 kcal
-Protein: 18g
-Kohlenhydrate: 50g
-Fett: 5g">
-                    <span class="item-name">Linsensuppe</span>
-                    <button class="details-btn" type="button">Details</button>
-                </div>
+                <!-- Rezepte werden hier per JavaScript geladen -->
             </div>
         </section>
 
@@ -426,25 +364,56 @@ Fett: 5g">
         </div>
     </div>
 
+    <!-- Exercise Detail Modal -->
+    <div id="exerciseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalExerciseName">Übungsname</h3>
+            <h4>Ausführung:</h4>
+            <img id="modalExerciseImage" src="" alt="Übungsbild" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;">
+            <h4 id="modalExerciseMusclesHeader">Trainierte Muskeln:</h4>
+            <ul id="modalExerciseMuscles">
+                <!-- Muskeln werden hier als Listenelemente eingefügt -->
+            </ul>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Dein Trainingsplaner. Alle Rechte vorbehalten.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const draggableItems = document.querySelectorAll('.item[draggable="true"]');
             const planAreas = document.querySelectorAll('.plan-area');
             let draggedItem = null;
+
+            const uebungenContainer = document.getElementById('verfuegbare-uebungen');
+            const rezepteContainer = document.getElementById('verfuegbare-rezepte');
+
+            // --- Recipe Modal Elements ---
+            const recipeModal = document.getElementById('recipeModal');
+            const modalRecipeName = document.getElementById('modalRecipeName');
+            const modalRecipePreparation = document.getElementById('modalRecipePreparation');
+            const modalRecipeNutrition = document.getElementById('modalRecipeNutrition');
+            const recipeCloseButton = recipeModal.querySelector('.close-button');
+
+            // --- Exercise Modal Elements ---
+            const exerciseModal = document.getElementById('exerciseModal');
+            const modalExerciseName = document.getElementById('modalExerciseName');
+            const modalExerciseImage = document.getElementById('modalExerciseImage');
+            const modalExerciseMusclesList = document.getElementById('modalExerciseMuscles');
+            const modalExerciseMusclesHeader = document.getElementById('modalExerciseMusclesHeader');
+            const exerciseCloseButton = exerciseModal.querySelector('.close-button');
 
             // --- Persistence Functions ---
             function savePlan() {
                 const planData = {};
                 document.querySelectorAll('.plan-tag').forEach(tagElement => {
-                    const day = tagElement.id; // e.g., 'montag'
+                    const day = tagElement.id;
                     const planArea = tagElement.querySelector('.plan-area');
                     const items = [];
                     planArea.querySelectorAll('.planned-item').forEach(itemElement => {
-                        const itemName = itemElement.childNodes[0].nodeValue.trim(); // Text node is the first child
+                        const itemName = itemElement.dataset.itemName;
                         const itemType = itemElement.dataset.itemType;
                         if (itemName && itemType) {
                             items.push({ name: itemName, type: itemType });
@@ -459,6 +428,7 @@ Fett: 5g">
                 const plannedItemDiv = document.createElement('div');
                 plannedItemDiv.classList.add('planned-item');
                 plannedItemDiv.dataset.itemType = itemData.type;
+                plannedItemDiv.dataset.itemName = itemData.name;
 
                 if (itemData.type === 'recipe') {
                     plannedItemDiv.classList.add('recipe-planned');
@@ -489,7 +459,7 @@ Fett: 5g">
                         for (const day in planData) {
                             const planArea = document.querySelector(`#${day} .plan-area`);
                             if (planArea) {
-                                planArea.innerHTML = ''; // Clear existing items before loading
+                                planArea.innerHTML = ''; 
                                 planData[day].forEach(itemData => {
                                     if (itemData && typeof itemData.name === 'string' && typeof itemData.type === 'string') {
                                         const plannedItemElement = createPlannedItemElement(itemData);
@@ -500,25 +470,115 @@ Fett: 5g">
                         }
                     } catch (error) {
                         console.error("Fehler beim Laden des Plans aus localStorage:", error);
-                        // Optional: Clear corrupted data
-                        // localStorage.removeItem('meinWochenplan');
                     }
                 }
             }
 
-            // --- Drag and Drop Logic ---
-            draggableItems.forEach(item => {
-                item.addEventListener('dragstart', (e) => {
-                    draggedItem = item;
-                    const itemName = item.dataset.name || item.querySelector('.item-name')?.textContent || item.id;
+            // --- Drag and Drop Item Creation ---
+            function addItemDragListeners(itemElement) {
+                itemElement.addEventListener('dragstart', (e) => {
+                    draggedItem = itemElement;
+                    const itemName = itemElement.dataset.name || itemElement.id;
                     e.dataTransfer.setData('text/plain', itemName);
                 });
-
-                item.addEventListener('dragend', () => {
-                    draggedItem = null; 
+                itemElement.addEventListener('dragend', () => {
+                    draggedItem = null;
                 });
-            });
+            }
 
+            // Note: Ensure your uebungen.json contains 'imageUrl' and 'muscles' (array of strings) for exercises.
+            // Example: { "id": "squats", "name": "Kniebeugen", "type": "exercise", "imageUrl": "images/squats.jpg", "muscles": ["Quadrizeps", "Gesäß"] }
+            function createExerciseElement(exercise) {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+                itemDiv.draggable = true;
+                itemDiv.id = exercise.id;
+                itemDiv.dataset.type = exercise.type;
+                itemDiv.dataset.name = exercise.name; 
+                if (exercise.imageUrl) {
+                    itemDiv.dataset.imageUrl = exercise.imageUrl;
+                }
+                if (exercise.muscles && Array.isArray(exercise.muscles)) {
+                    itemDiv.dataset.muscles = JSON.stringify(exercise.muscles);
+                }
+
+                const itemNameSpan = document.createElement('span');
+                itemNameSpan.className = 'item-name';
+                itemNameSpan.textContent = exercise.name;
+                itemDiv.appendChild(itemNameSpan);
+
+                const detailsButton = document.createElement('button');
+                detailsButton.className = 'details-btn';
+                detailsButton.type = 'button';
+                detailsButton.textContent = 'Details';
+                itemDiv.appendChild(detailsButton);
+
+                detailsButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const imageUrl = itemDiv.dataset.imageUrl;
+                    const musclesString = itemDiv.dataset.muscles || '[]';
+                    let musclesArray = [];
+                    try {
+                        musclesArray = JSON.parse(musclesString);
+                    } catch (err) {
+                        console.error("Fehler beim Parsen der Muskel-Daten:", err);
+                    }
+                    openExerciseModal(exercise.name, imageUrl, musclesArray);
+                });
+                
+                addItemDragListeners(itemDiv);
+                return itemDiv;
+            }
+
+            function createRecipeElement(recipe) {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+                itemDiv.draggable = true;
+                itemDiv.id = recipe.id;
+                itemDiv.dataset.type = recipe.type;
+                itemDiv.dataset.name = recipe.name;
+                itemDiv.dataset.preparation = recipe.preparation;
+                itemDiv.dataset.nutrition = recipe.nutrition;
+
+                const itemNameSpan = document.createElement('span');
+                itemNameSpan.className = 'item-name';
+                itemNameSpan.textContent = recipe.name;
+                itemDiv.appendChild(itemNameSpan);
+
+                const detailsButton = document.createElement('button');
+                detailsButton.className = 'details-btn';
+                detailsButton.type = 'button';
+                detailsButton.textContent = 'Details';
+                itemDiv.appendChild(detailsButton);
+
+                detailsButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openRecipeModal(recipe.name, recipe.preparation, recipe.nutrition);
+                });
+                
+                addItemDragListeners(itemDiv);
+                return itemDiv;
+            }
+
+            async function loadItems(jsonPath, containerElement, itemCreatorFunction) {
+                try {
+                    const response = await fetch(jsonPath);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} for ${jsonPath}`);
+                    }
+                    const items = await response.json();
+                    
+                    items.forEach(itemData => {
+                        const itemElement = itemCreatorFunction(itemData);
+                        containerElement.appendChild(itemElement);
+                    });
+                } catch (error) {
+                    console.error(`Fehler beim Laden von ${jsonPath}:`, error);
+                    containerElement.innerHTML = `<p style="color: red;">Fehler beim Laden der Daten aus ${jsonPath}. Bitte prüfe die Konsole und die JSON-Datei.</p>`;
+                }
+            }
+
+            // --- Plan Area Drop Logic ---
             planAreas.forEach(area => {
                 area.addEventListener('dragover', (e) => {
                     e.preventDefault(); 
@@ -533,8 +593,8 @@ Fett: 5g">
                     e.preventDefault();
                     area.classList.remove('drag-over');
                     if (draggedItem) {
-                        const itemName = draggedItem.dataset.name || draggedItem.querySelector('.item-name')?.textContent || draggedItem.id;
-                        const itemType = draggedItem.dataset.type; // 'recipe' or 'exercise'
+                        const itemName = draggedItem.dataset.name;
+                        const itemType = draggedItem.dataset.type;
                         
                         if (itemName && itemType) {
                             const itemData = { name: itemName.trim(), type: itemType };
@@ -547,60 +607,78 @@ Fett: 5g">
             });
 
             // --- Recipe Modal Logic ---
-            const modal = document.getElementById('recipeModal');
-            const modalRecipeName = document.getElementById('modalRecipeName');
-            const modalRecipePreparation = document.getElementById('modalRecipePreparation');
-            const modalRecipeNutrition = document.getElementById('modalRecipeNutrition');
-            const closeButton = modal.querySelector('.close-button');
-
             function openRecipeModal(name, preparation, nutrition) {
                 modalRecipeName.textContent = name;
                 modalRecipePreparation.textContent = preparation;
                 modalRecipeNutrition.textContent = nutrition;
-                modal.style.display = 'block';
+                recipeModal.style.display = 'block';
             }
 
             function closeRecipeModal() {
-                modal.style.display = 'none';
+                recipeModal.style.display = 'none';
             }
 
-            if (closeButton) {
-                closeButton.onclick = closeRecipeModal;
+            if (recipeCloseButton) {
+                recipeCloseButton.onclick = closeRecipeModal;
             }
 
+            // --- Exercise Modal Logic ---
+            function openExerciseModal(name, imageUrl, muscles) {
+                modalExerciseName.textContent = name;
+
+                if (imageUrl) {
+                    modalExerciseImage.src = imageUrl;
+                    modalExerciseImage.alt = `Bild von ${name}`;
+                    modalExerciseImage.style.display = 'block';
+                } else {
+                    modalExerciseImage.src = '';
+                    modalExerciseImage.alt = 'Kein Bild verfügbar';
+                    modalExerciseImage.style.display = 'none';
+                }
+                
+                modalExerciseMusclesList.innerHTML = ''; // Clear previous muscles
+                if (muscles && Array.isArray(muscles) && muscles.length > 0) {
+                    muscles.forEach(muscle => {
+                        const li = document.createElement('li');
+                        li.textContent = muscle;
+                        modalExerciseMusclesList.appendChild(li);
+                    });
+                    modalExerciseMusclesHeader.style.display = 'block';
+                    modalExerciseMusclesList.style.display = 'block';
+                } else {
+                    modalExerciseMusclesHeader.style.display = 'none';
+                    modalExerciseMusclesList.style.display = 'none';
+                }
+                
+                exerciseModal.style.display = 'block';
+            }
+
+            function closeExerciseModal() {
+                exerciseModal.style.display = 'none';
+            }
+
+            if (exerciseCloseButton) {
+                exerciseCloseButton.onclick = closeExerciseModal;
+            }
+
+            // Close modals when clicking outside
             window.onclick = function(event) {
-                if (event.target == modal) {
+                if (event.target == recipeModal) {
                     closeRecipeModal();
                 }
+                if (event.target == exerciseModal) {
+                    closeExerciseModal();
+                }
+            }
+            
+            // --- Initial Load ---
+            async function initializeApp() {
+                await loadItems('uebungen.json', uebungenContainer, createExerciseElement);
+                await loadItems('rezepte.json', rezepteContainer, createRecipeElement);
+                loadPlan();
             }
 
-            document.querySelectorAll('#verfuegbare-rezepte .item[data-type="recipe"]').forEach(recipeItem => {
-                const detailsButton = recipeItem.querySelector('.details-btn');
-                if (detailsButton) {
-                    detailsButton.addEventListener('click', (e) => {
-                        e.stopPropagation(); 
-                        const name = recipeItem.dataset.name;
-                        const preparation = recipeItem.dataset.preparation;
-                        const nutrition = recipeItem.dataset.nutrition;
-                        openRecipeModal(name, preparation, nutrition);
-                    });
-                }
-            });
-            
-            // Ensure exercises also have item-name span if they don't have buttons, for consistency
-            document.querySelectorAll('#verfuegbare-uebungen .item[data-type="exercise"]').forEach(exerciseItem => {
-                if (!exerciseItem.querySelector('.item-name')) {
-                    const originalText = exerciseItem.textContent.trim();
-                    exerciseItem.innerHTML = ''; 
-                    const span = document.createElement('span');
-                    span.className = 'item-name';
-                    span.textContent = originalText;
-                    exerciseItem.appendChild(span);
-                }
-            });
-
-            // --- Initial Load ---
-            loadPlan();
+            initializeApp();
         });
     </script>
 

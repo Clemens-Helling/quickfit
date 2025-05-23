@@ -1,0 +1,23 @@
+[
+  {
+    "id": "liegestuetze",
+    "name": "Liegestütze",
+    "type": "exercise",
+    "imageUrl": "images/liegestuezte.jpg",
+    "muscles": ["Brust", "Schultern", "Trizeps", "Core"]
+  },
+  {
+    "id": "kniebeugen",
+    "name": "Kniebeugen",
+    "type": "exercise",
+    "imageUrl": "images/kniebeugen.png",
+    "muscles": ["Quadrizeps", "Gesäßmuskeln", "Beinbeuger", "Core"]
+  },
+  {
+    "id": "plank",
+    "name": "Plank",
+    "type": "exercise",
+    "imageUrl": "images/plank.gif",
+    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rezept1",
+    "name": "Protein Shake",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+  {
+    "id": "rezept2",
+    "name": "Hähnchen mit Reis und Brokkoli",
+    "type": "recipe",
+    "preparation": "1. Hähnchen würzen und anbraten.\n2. Reis kochen.\n3. Brokkoli dämpfen.\n4. Alles zusammen servieren.",
+    "nutrition": "Kalorien: 550 kcal\nProtein: 45g\nKohlenhydrate: 60g\nFett: 15g"
+  }
+]
