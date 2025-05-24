@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainingsplan Gestalter</title>
     <style>
-       body { 
+       body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f7fa;
+    background-color: #F0F4F0; /* Light greenish grey */
     color: #333;
     line-height: 1.6;
 }
@@ -22,7 +22,7 @@
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #2A5C3D; /* Deep Green */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -33,7 +33,7 @@ header h1 {
 }
 
 nav {
-    background-color: #2c3e50;
+    background-color: #2A5C3D; /* Deep Green */
     padding: 0.5rem;
     margin-bottom: 20px;
 }
@@ -61,7 +61,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .content-section {
-    background-color: #fff;
+    background-color: #fff; /* Keep white for clean content areas */
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -69,8 +69,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .content-section h2 {
-    color: #333;
-    border-bottom: 2px solid #eee;
+    color: #2A5C3D; /* Heading color to match theme */
+    border-bottom: 2px solid #e0e0e0; /* Lighter border */
     padding-bottom: 10px;
     margin-top: 0;
 }
@@ -82,15 +82,15 @@ nav ul li a:hover, nav ul li a.active {
     padding: 10px;
     border: 1px dashed #ccc;
     margin-top: 10px;
-    background-color: #f9f9f9;
+    background-color: #E9F5E9; /* Light green tint for item list background */
     min-height: 50px;
 }
 
 .item {
-    background-color: #3498db;
-    padding: 10px 15px;
-    border: 1px solid #2980b9;
+    background-color: #5cb85c; /* A pleasant, medium green */
+    border: 1px solid #4cae4c; /* Darker shade for border */
     color: #fff;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: grab;
     user-select: none;
@@ -106,19 +106,19 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .item:hover {
-    background-color: #2980b9;
+    background-color: #4cae4c; /* Darker green on hover */
 }
 
 .item:active {
     cursor: grabbing;
-    background-color: #2471a3;
+    background-color: #449d44; /* Even darker green when active */
 }
 
 .item .details-btn {
     padding: 4px 8px;
     font-size: 0.85em;
     cursor: pointer;
-    background-color: #2c3e50;
+    background-color: #3e8e41; /* A distinct, darker green */
     color: white;
     border: none;
     border-radius: 3px;
@@ -126,7 +126,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .item .details-btn:hover {
-    background-color: #1a242f;
+    background-color: #2A5C3D; /* Match header green on hover */
 }
 
 #trainingsplan-bereich .plan-tag {
@@ -134,13 +134,13 @@ nav ul li a:hover, nav ul li a.active {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #fdfdfd;
+    background-color: #fdfdfd; /* Keep light for contrast within plan days */
 }
 
 #trainingsplan-bereich .plan-tag h3 {
     margin-top: 0;
     font-size: 1.2em;
-    color: #555;
+    color: #2A5C3D; /* Theme color for day headings */
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -149,9 +149,8 @@ nav ul li a:hover, nav ul li a.active {
 .plan-area {
     min-height: 80px;
     padding: 10px;
-    border: 2px dashed #3498db;
-    margin-top: 10px;
-    background-color: #e8f4fb;
+    border: 2px dashed #5cb85c; /* Green dashed border */
+    background-color: #E9F5E9; /* Light green background */
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
@@ -161,31 +160,32 @@ nav ul li a:hover, nav ul li a.active {
 
 .plan-area.drag-over {
     border-style: solid;
-    border-color: #2980b9;
-    background-color: #d6eaf8;
+    border-color: #4cae4c; /* Darker green border on drag over */
+    background-color: #DFF0D8; /* Lighter green background on drag over */
 }
 
 .planned-item {
-    background-color: #ecf0f1;
-    border: 1px solid #bdc3c7;
+    background-color: #e0e0e0; 
+    border: 1px solid #bdbdbd;
     padding: 8px 12px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9em;
+    color: #333;
 }
 
 .planned-item.recipe-planned {
-    background-color: #5dade2;
-    border-color: #3498db;
-    color: #fff;
+    background-color: #A3D9A5; /* Light green for recipes */
+    border-color: #77B577; /* Slightly darker green border */
+    color: #1E4620; /* Dark green text for readability */
 }
 
 .planned-item.exercise-planned {
-    background-color: #2ecc71;
-    border-color: #27ae60;
-    color: #fff;
+    background-color: #8BCDA3; /* Another light green for exercises */
+    border-color: #6FAA81; /* Slightly darker green border */
+    color: #1E4620; /* Dark green text */
 }
 
 .planned-item .remove-btn {
@@ -220,7 +220,7 @@ nav ul li a:hover, nav ul li a.active {
     background-color: #fefefe;
     margin: 10% auto;
     padding: 25px;
-    border: 1px solid #888;
+    border: 1px solid #ccc;
     width: 85%;
     max-width: 600px;
     border-radius: 8px;
@@ -230,14 +230,14 @@ nav ul li a:hover, nav ul li a.active {
 
 .modal-content h3 {
     margin-top: 0;
-    color: #333;
+    color: #2A5C3D; /* Modal title in theme color */
 }
 
 .modal-content h4 {
     margin-top: 15px;
     margin-bottom: 5px;
-    color: #555;
-    border-bottom: 1px solid #eee;
+    color: #4CAF50; /* Sub-headings in a lighter, vibrant green */
+    border-bottom: 1px solid #e0e0e0;
     padding-bottom: 3px;
 }
 
@@ -265,7 +265,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: #2A5C3D; /* Theme color for close button hover */
     text-decoration: none;
     cursor: pointer;
 }
@@ -274,7 +274,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
-    background-color: #2c3e50;
+    background-color: #2A5C3D; /* Deep Green */
     color: #fff;
 }
 
