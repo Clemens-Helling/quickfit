@@ -17,14 +17,14 @@
     "id": "plank",
     "name": "Plank",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/Plank.jpeg",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
   },
   {
     "id": "beidseitiges-armdruecken",
     "name": "Beidseitiges Armdrücken",
     "type": "exercise",
-    "imageUrl": "images/armdruecken.jpg",
+    "imageUrl": "images/Arme.png",
     "muscles": ["Bizeps", "Trizeps", "Beine"]
   },
   {
@@ -45,14 +45,14 @@
     "id": "crunches",
     "name": "Crunches",
     "type": "exercise",
-    "imageUrl": "images/crunches.gif",
+    "imageUrl": "images/crunches.png",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
   },
   {
     "id": "321-squads",
     "name": "3-2-1-Squats",
     "type": "exercise",
-    "imageUrl": "images/squats.gif",
+    "imageUrl": "images/321-squats.jpeg",
     "muscles": ["Beine"]
   },
   {
@@ -87,7 +87,7 @@
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
-    "imageUrl": "images/burpees.gif",
+    "imageUrl": "images/burpes.jepg",
     "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"]
   },
   {
@@ -108,7 +108,8 @@
     "id": "jumping-jacks",
     "name": "Hampelmänner",
     "type": "exercise",
-    "imageUrl": "images/jumpingjacks.gif",
+    "imageUrl": "images/hampelman.png",
     "muscles": ["Beine", "Arme", "Core", "Ausdauer"]
-  } 
+  }
+
 ]
