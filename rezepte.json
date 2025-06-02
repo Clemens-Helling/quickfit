@@ -10,7 +10,88 @@
     "id": "rezept2",
     "name": "Hähnchen mit Reis und Brokkoli",
     "type": "recipe",
-    "preparation": "1. Hähnchen würzen und anbraten.\n2. Reis kochen.\n3. Brokkoli dämpfen.\n4. Alles zusammen servieren.",
+    "preparation": "1. Hänchenbrust in Scheiben Schneiden /n
+2. Hähnchen in einer Marinade aus Öl Soja Soße Paprikapulver Knoblauch Salz und Pfeffer marinieren. Parallel den Reis Kochen /n
+3. Hähnchen in Oliven Öl anbraten und mit Reis Servieren.
+",
     "nutrition": "Kalorien: 550 kcal\nProtein: 45g\nKohlenhydrate: 60g\nFett: 15g"
-  }
+  },
+
+{
+    "id": "rezept3",
+    "name": "Quarkbrot",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept4",
+    "name": "Vollkornbrot mit Ei",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept5",
+    "name": "Skyr mit Nüssen ",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept6",
+    "name": "Lachs mit Süßkartoffeln",
+    "type": "recipe",
+    "preparation": "1. Lachs mit Olivenöl anbraten und mit Salz und Pfeffer Würzen.\n2. Süßkartoffeln kochen.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept7",
+    "name": "Linsen Curry mit Reis",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  }, {
+    "id": "rezept8",
+    "name": "Grillgemüse mit Hummus",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept9",
+    "name": "Vollkorn Thunfisch Pasta",
+    "type": "recipe",
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept10",
+    "name": "Nüsse",
+    "type": "recipe",
+    "preparation": "",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept11",
+    "name": "Obstsalat",
+    "type": "recipe",
+    "preparation": "1.Beliebiges Obst in Würfel schneiden./n2. Würfel nach Belieben mit Honig süßen und ein Wenig Zitrone hinzufügen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
+
+{
+    "id": "rezept12",
+    "name": "Rohkostplatte",
+    "type": "recipe",
+    "preparation": "1.Beliebiges Obst und Gemüse schneiden und auf einem Teller Servieren.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+  },
 ]
