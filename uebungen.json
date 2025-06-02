@@ -3,15 +3,15 @@
     "id": "liegestuetze",
     "name": "Liegestütze",
     "type": "exercise",
-    "imageUrl": "images/liegestuezte.jpg",
+    "imageUrl": "images/liegestuetze.jpg",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"]
   },
   {
-    "id": "dips",
+    "id": "kniebeugen",
     "name": "Kniebeugen",
     "type": "exercise",
     "imageUrl": "images/kniebeugen.png",
-    "muscles": ["Trizeps", "Schulter"]
+    "muscles": ["Beine", "Gesäß", "Core"]
   },
   {
     "id": "plank",
@@ -20,100 +20,81 @@
     "imageUrl": "images/plank.gif",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
   },
-
-{
-    "id": "beidseitigesdruecken",
-    "name": "Beidseitiges Armdruecken",
+  {
+    "id": "beidseitiges-armdruecken",
+    "name": "Beidseitiges Armdrücken",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/armdruecken.jpg",
     "muscles": ["Bizeps", "Trizeps", "Beine"]
   },
-
-{
-    "id": "klimzuege",
-    "name": "Klimzuege",
+  {
+    "id": "klimmzuege",
+    "name": "Klimmzüge",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/klimmzuege.jpg",
     "muscles": ["Core", "Bauchmuskeln", "Arme"]
   },
-
-{
-    "id": "sit-ups ",
-    "name": "Sit-ups ",
+  {
+    "id": "situps",
+    "name": "Sit-ups",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/situps.gif",
     "muscles": ["Core", "Bauchmuskeln"]
   },
-
-{
-    "id": "plank",
-    "name": "Plank",
-    "type": "exercise",
-    "imageUrl": "images/plank.gif",
-    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
-  } ,
-{
+  {
     "id": "crunches",
     "name": "Crunches",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/crunches.gif",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
-  } ,
-{
-    "id": "3-2-1-squads",
-    "name": "3-2-1-squads",
+  },
+  {
+    "id": "321-squads",
+    "name": "3-2-1-Squats",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/squats.gif",
     "muscles": ["Beine"]
   },
-
-{
-    "id": "squads",
-    "name": "Squads",
+  {
+    "id": "squats",
+    "name": "Squats",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
-    "muscles": ["Beine",]
+    "imageUrl": "images/squats.gif",
+    "muscles": ["Beine"]
   },
-
-{
-    "id": "lunges",
+  {
+    "id": "ausfallschritte",
     "name": "Ausfallschritte",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
-    "muscles": ["Core", "Unterschenkel", "Obersschenkel"]
+    "imageUrl": "images/lunges.gif",
+    "muscles": ["Core", "Unterschenkel", "Oberschenkel"]
   },
-
-{
-    "id": "jumpsquads",
-    "name": "Jump-Squads",
+  {
+    "id": "jump-squats",
+    "name": "Jump-Squats",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/jumpsquats.gif",
     "muscles": ["Oberschenkel", "Unterschenkel", "Core"]
-
   },
-
-{
+  {
     "id": "superman",
     "name": "Superman",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
+    "imageUrl": "images/superman.gif",
     "muscles": ["Rücken", "Core", "Beine"]
   },
-
-{
+  {
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
-    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß "]
+    "imageUrl": "images/burpees.gif",
+    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"]
   },
- {
-    "id": "mountainclimbers",
+  {
+    "id": "mountain-climbers",
     "name": "Mountain Climbers",
     "type": "exercise",
-    "imageUrl": "images/plank.gif",
-    "muscles": ["Core", "Schulter ", "Beine", "Ausdauer"]
-  },
-
-
+    "imageUrl": "images/mountainclimbers.gif",
+    "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
+  }
 ]
