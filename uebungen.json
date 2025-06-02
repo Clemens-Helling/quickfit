@@ -96,5 +96,19 @@
     "type": "exercise",
     "imageUrl": "images/mountainclimbers.gif",
     "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
-  }
+  },
+  {
+    "id": "high-knees",
+    "name": "High Knees",
+    "type": "exercise",
+    "imageUrl": "images/highknees.gif",
+    "muscles": ["Beine", "Core", "Ausdauer"]
+  },
+  {
+    "id": "jumping-jacks",
+    "name": "Hampelmänner",
+    "type": "exercise",
+    "imageUrl": "images/jumpingjacks.gif",
+    "muscles": ["Beine", "Arme", "Core", "Ausdauer"]
+  } 
 ]

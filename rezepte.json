@@ -3,94 +3,84 @@
     "id": "rezept1",
     "name": "Erdbeer-Bananen-Proteinshake mit Zimtnote",
     "type": "recipe",
-    "preparation": "1. Eine geschälte Banane, 200 ml Milch und 2 gehäufte EL Eweißpulver mit Erdbeergeschmack in einen Mixer geben.\n2. Gut durchmixen, bid es schön schaumig ist.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 241 kcal\nEiweiß: 24g\nKohlenhydrate: 23,5g\nFett: 4,3g"
+    "preparation": "1. Eine geschälte Banane, 200 ml Milch und 2 gehäufte EL Eiweißpulver mit Erdbeergeschmack in einen Mixer geben.\n2. Gut durchmixen, bis es schön schaumig ist.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 240 kcal\nEiweiß: 24 g\nKohlenhydrate: 23 g\nFett: 4 g"
   },
   {
     "id": "rezept2",
     "name": "Hähnchen mit Reis und Brokkoli",
     "type": "recipe",
     "preparation": "1. Hähnchenbrust in Scheiben schneiden.\n2. In einer Marinade aus Öl, Sojasoße, Paprikapulver, Knoblauch, Salz und Pfeffer einlegen. Parallel den Reis kochen.\n3. Hähnchen in Olivenöl anbraten, mit dem Reis und Brokkoli servieren.",
-    "nutrition": "Kalorien: 620 kcal\nEiweiß: 50g\nKohlenhydrate: 60g\nFett: 18g"
+    "nutrition": "Kalorien: 620 kcal\nEiweiß: 50 g\nKohlenhydrate: 60 g\nFett: 18 g"
   },
   {
-  "id": "rezept3",
-  "name": "Quarkbrot mit Kräuterquark",
-  "type": "recipe",
-  "preparation": "1. Eine Scheibe Vollkornbrot abschneiden und nach Wunsch leicht toasten.\n2. 150g Magerquark mit 1 EL Mineralwasser verrühren, bis er cremig ist.\n3. 1 Prise Salz, 1 Prise Pfeffer und 1 Prise Paprikapulver dazugeben.\n4. 1 TL frische Kräuter fein hacken und unterrühren.\n5. Den Quark großzügig auf das Brot streichen.\n6. Optional mit 3-4 Radieschenscheiben, 1/2 Gurke in Scheiben, 1 gekochtem Ei und etwas Kresse belegen.\n7. Nach Belieben ein paar Tropfen Leinöl oder Olivenöl darüberträufeln.\n8. Direkt servieren und genießen.",
-  "nutrition": "Kalorien: ca. 250 kcal\nEiweiß: ca. 20g\nKohlenhydrate: ca. 15g\nFett: ca. 5g"
+    "id": "rezept3",
+    "name": "Quarkbrot mit Kräuterquark",
+    "type": "recipe",
+    "preparation": "1. Eine Scheibe Vollkornbrot abschneiden und nach Wunsch leicht toasten.\n2. 150 g Magerquark mit 1 EL Mineralwasser verrühren, bis er cremig ist.\n3. 1 Prise Salz, 1 Prise Pfeffer und 1 Prise Paprikapulver dazugeben.\n4. 1 TL frische Kräuter fein hacken und unterrühren.\n5. Den Quark großzügig auf das Brot streichen.\n6. Optional mit Radieschenscheiben, Gurkenscheiben, gekochtem Ei und Kresse belegen.\n7. Nach Belieben ein paar Tropfen Leinöl oder Olivenöl darüberträufeln.\n8. Direkt servieren und genießen.",
+    "nutrition": "Kalorien: 250 kcal\nEiweiß: 20 g\nKohlenhydrate: 15 g\nFett: 5 g"
   },
-
   {
     "id": "rezept4",
     "name": "Vollkornbrot mit Ei",
     "type": "recipe",
     "preparation": "1. Eier hart kochen.\n2. Vollkornbrot toasten.\n3. Eier in Scheiben schneiden und aufs Brot legen, nach Belieben würzen.",
-    "nutrition": "Kalorien: 400 kcal\nEiweiß: 22g\nKohlenhydrate: 30g\nFett: 15g"
+    "nutrition": "Kalorien: 400 kcal\nEiweiß: 22 g\nKohlenhydrate: 30 g\nFett: 15 g"
   },
   {
     "id": "rezept5",
     "name": "Skyr mit Nüssen",
     "type": "recipe",
     "preparation": "1. Skyr in eine Schüssel geben.\n2. Mit Nüssen und optional etwas Honig toppen.",
-    "nutrition": "Kalorien: 250 kcal\nEiweiß: 20g\nKohlenhydrate: 10g\nFett: 12g"
+    "nutrition": "Kalorien: 250 kcal\nEiweiß: 20 g\nKohlenhydrate: 10 g\nFett: 12 g"
   },
   {
     "id": "rezept6",
     "name": "Gebackener Lachs auf Süßkartoffel und Brokkoli",
     "type": "recipe",
-    "preparation": "1. Süßkartoffeln schälen, waschen, halbieren und in Spalten schneiden. Mit grobem Salz würzen und mit 2 EL Olivenöl beträufeln. Auf einem Backblech verteilen und im vorgeheizten Backofen (E-Herd: 225 °C/Umluft: 200 °C/Gas: Stufe 4) ca. 20 Minuten garen. Zwischendurch die Kartoffeln vorsichtig wenden.\n2. In der Zwischenzeit Brokkoliröschen vom Strunk schneiden, evtl. halbieren. Lachsfilets kalt abspülen, trocken tupfen und mit grobem Salz würzen. 2 EL Olivenöl in einer großen beschichteten Pfanne erhitzen. Filets darin von jeder Seite 2–3 Minuten braten. Zum Schluss mit Pfeffer würzen. Rosmarin waschen, trocken schütteln, Nadeln, bis auf 2 Zweige zum Garnieren, abstreifen und zum Lachs geben.\n3. Brokkoli in kochendem Salzwasser 4–5 Minuten garen, abgießen, abtropfen lassen.\n4. Süßkartoffeln, Brokkoli und Lachs auf Tellern anrichten. Mit 1 TL Edelsüßpaprika bestreuen und mit Rosmarin garnieren.",
-    "nutrition": "Kalorien: 630 kcal\nEiweiß: 36 g\nFett: 32 g\nKohlenhydrate: 50 g"
+    "preparation": "1. Süßkartoffeln schälen, waschen, halbieren und in Spalten schneiden. Mit grobem Salz würzen und mit 2 EL Olivenöl beträufeln. Auf einem Backblech verteilen und im vorgeheizten Backofen (E-Herd: 225 °C/Umluft: 200 °C/Gas: Stufe 4) ca. 20 Minuten garen. Zwischendurch wenden.\n2. Brokkoliröschen schneiden. Lachsfilets kalt abspülen, trocken tupfen und mit grobem Salz würzen. 2 EL Olivenöl in einer Pfanne erhitzen und Filets 2–3 Minuten je Seite braten. Mit Pfeffer würzen. Rosmarin dazugeben.\n3. Brokkoli in kochendem Salzwasser 4–5 Minuten garen, abgießen.\n4. Süßkartoffeln, Brokkoli und Lachs anrichten, mit Paprika bestreuen und Rosmarin garnieren.",
+    "nutrition": "Kalorien: 630 kcal\nEiweiß: 36 g\nKohlenhydrate: 50 g\nFett: 32 g"
   },
-
   {
     "id": "rezept7",
     "name": "Rotes Linsen-Curry mit Kokosmilch",
     "type": "recipe",
-    "preparation": "1. Knoblauch und Ingwer klein hacken. Tomaten vierteln. Linsen in ein Sieb geben und abspülen.\n2. Öl in einem Topf erhitzen und Knoblauch und Ingwer anbraten. Dann Kreuzkümmel, Zimt und Curry unterheben und kurz anrösten.\n3. Kokosmilch, Gemüsebrühe, Tomaten und Linsen zugeben und aufkochen. Bei mittlerer Hitze 20 Minuten köcheln lassen, bis die Linsen weich sind. Ggf. noch etwas Wasser zugeben. Rote Linsen-Curry mit Salz, Pfeffer und Limettensaft abschmecken.",
-    "nutrition": "Kalorien: 323 kcal\nEiweiß: 17 g\nKohlenhydrate: 47 g\nFett: 7 g"
-    
+    "preparation": "1. Knoblauch und Ingwer klein hacken. Tomaten vierteln. Linsen abspülen.\n2. Öl erhitzen, Knoblauch und Ingwer anbraten. Kreuzkümmel, Zimt und Curry dazugeben und kurz anrösten.\n3. Kokosmilch, Gemüsebrühe, Tomaten und Linsen zugeben und 20 Minuten köcheln lassen. Mit Salz, Pfeffer und Limettensaft abschmecken.",
+    "nutrition": "Kalorien: 320 kcal\nEiweiß: 17 g\nKohlenhydrate: 47 g\nFett: 7 g"
   },
-
   {
-    "id": "rezept7",
+    "id": "rezept8",
     "name": "Grillgemüse mit Hummus",
     "type": "recipe",
-    "preparation": "1. **Hummus zubereiten:** 1 Dose Kichererbsen (ca. 400 g) abtropfen lassen. 1 Knoblauchzehe halbieren. Kichererbsen, Knoblauch, 60 g Tahina (Sesampaste), 3 EL Olivenöl, 4 EL Wasser, 1 ½ EL Zitronensaft, ½ EL Kreuzkümmelpulver, ¾ TL Salz und wenig Pfeffer in einen Mixbecher geben und fein pürieren. Beiseitestellen.\n2. **Gemüse vorbereiten:** 300 g Snack-Peperoni, 500 g Zucchetti (längs in ca. 1 cm dicke Scheiben) und 380 g Auberginen (in ca. 1 cm dicke Scheiben) mit 2 EL Olivenöl, ¾ TL Salz und wenig Pfeffer in einer Schüssel mischen.\n3. **Tomaten vorbereiten:** 350 g verschiedenfarbige Cherry-Tomaten in eine Grillschale geben, ½ EL Olivenöl darüberträufeln und mit ¼ TL Salz würzen.\n4. **Grillieren:** Peperoni, Zucchetti und Auberginen bei geschlossenem Deckel über mittelstarker Glut bzw. auf mittlerer Stufe (ca. 200 °C) beidseitig je ca. 5 Minuten grillieren. Dabei die Tomaten in der Grillschale ca. 8 Minuten mitgrillieren.\n5. **Anrichten:** Gemüse mit dem Hummus und den beiseitegestellten Kichererbsen auf einer Platte anrichten.",
-    "nutrition": "Kalorien: 386 kcal\nEiweiß: 12 g\nKohlenhydrate: 26 g\nFett: 25 g"
-    
-    
-
+    "preparation": "1. Hummus zubereiten: 1 Dose Kichererbsen (400 g) abtropfen lassen. 1 Knoblauchzehe, 60 g Tahina, 3 EL Olivenöl, 4 EL Wasser, 1,5 EL Zitronensaft, 0,5 EL Kreuzkümmelpulver, ¾ TL Salz, Pfeffer pürieren.\n2. 300 g Peperoni, 500 g Zucchini, 380 g Auberginen mit 2 EL Olivenöl, Salz und Pfeffer mischen.\n3. 350 g Cherry-Tomaten mit ½ EL Olivenöl und Salz würzen.\n4. Gemüse ca. 5 Minuten grillen, Tomaten 8 Minuten mitgrillen.\n5. Gemüse mit Hummus anrichten.",
+    "nutrition": "Kalorien: 390 kcal\nEiweiß: 12 g\nKohlenhydrate: 26 g\nFett: 25 g"
   },
-
   {
     "id": "rezept9",
     "name": "After-Work-Thunfischpasta für zwei",
     "type": "recipe",
-    "preparation": "1. 1 Dose Thunfisch abtropfen lassen. 200 g Vollkornpenne in 2–3 l kochendem Salzwasser (ca. 1 TL Salz pro Liter) nach Packungsanweisung garen.\n2. 1 Zwiebel und 1 Knoblauchzehe schälen und fein hacken. In 1 EL heißem Olivenöl andünsten. 1 Dose (425 ml) stückige Tomaten zugeben, aufkochen und ca. 5 Minuten köcheln lassen. 10 Basilikumblätter waschen. Mit dem Thunfisch zur Soße geben. Mit Salz, Pfeffer und 1 Prise Zucker abschmecken.\n3. Nudeln abgießen, mit der Soße mischen und anrichten.",
-    "nutrition": "Kalorien: 550 kcal\nEiweiß: 32 g\nKohlenhydrate: 82 g\nFett: 9 g",
-    "source": "https://www.lecker.de/after-work-thunfischpasta-fuer-zwei-45399.html"
+    "preparation": "1. 1 Dose Thunfisch abtropfen lassen. 200 g Vollkornpenne in Salzwasser kochen.\n2. Zwiebel und Knoblauch fein hacken und in 1 EL Olivenöl andünsten. 1 Dose stückige Tomaten zugeben, 5 Minuten köcheln lassen. Basilikum waschen, mit Thunfisch zur Soße geben. Mit Salz, Pfeffer und Zucker abschmecken.\n3. Nudeln abgießen, mit Soße mischen und servieren.",
+    "nutrition": "Kalorien: 550 kcal\nEiweiß: 32 g\nKohlenhydrate: 82 g\nFett: 9 g"
   },
-
   {
     "id": "rezept10",
     "name": "Nüsse",
     "type": "recipe",
     "preparation": "1. Eine Handvoll Nüsse auswählen.\n2. Direkt genießen oder ins Müsli geben.",
-    "nutrition": "Kalorien: 200 kcal\nEiweiß: 7g\nKohlenhydrate: 6g\nFett: 18g"
+    "nutrition": "Kalorien: 200 kcal\nEiweiß: 7 g\nKohlenhydrate: 6 g\nFett: 18 g"
   },
   {
     "id": "rezept11",
     "name": "Obstsalat",
     "type": "recipe",
     "preparation": "1. Beliebiges Obst in Würfel schneiden.\n2. Mit Honig süßen und etwas Zitronensaft dazugeben.",
-    "nutrition": "Kalorien: 180 kcal\nEiweiß: 3g\nKohlenhydrate: 30g\nFett: 2g"
+    "nutrition": "Kalorien: 180 kcal\nEiweiß: 3 g\nKohlenhydrate: 30 g\nFett: 2 g"
   },
   {
     "id": "rezept12",
     "name": "Rohkostplatte",
     "type": "recipe",
     "preparation": "1. Beliebiges Obst und Gemüse in Streifen oder Stücke schneiden.\n2. Auf einem Teller anrichten und nach Wunsch mit Dips servieren.",
-    "nutrition": "Kalorien: 120 kcal\nEiweiß: 3g\nKohlenhydrate: 20g\nFett: 3g"
+    "nutrition": "Kalorien: 120 kcal\nEiweiß: 3 g\nKohlenhydrate: 20 g\nFett: 3 g"
   }
 ]
