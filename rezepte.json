@@ -3,95 +3,84 @@
     "id": "rezept1",
     "name": "Protein Shake",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen, bis cremig.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 20g\nFett: 8g"
   },
   {
     "id": "rezept2",
     "name": "Hähnchen mit Reis und Brokkoli",
     "type": "recipe",
-    "preparation": "1. Hänchenbrust in Scheiben Schneiden /n
-2. Hähnchen in einer Marinade aus Öl Soja Soße Paprikapulver Knoblauch Salz und Pfeffer marinieren. Parallel den Reis Kochen /n
-3. Hähnchen in Oliven Öl anbraten und mit Reis Servieren.
-",
+    "preparation": "1. Hähnchenbrust in Scheiben schneiden.\n2. In einer Marinade aus Öl, Sojasoße, Paprikapulver, Knoblauch, Salz und Pfeffer einlegen. Parallel den Reis kochen.\n3. Hähnchen in Olivenöl anbraten, mit dem Reis und Brokkoli servieren.",
     "nutrition": "Kalorien: 550 kcal\nProtein: 45g\nKohlenhydrate: 60g\nFett: 15g"
   },
-
-{
+  {
     "id": "rezept3",
     "name": "Quarkbrot",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Quark, Haferflocken, Eier und Backpulver zu einem Teig verrühren.\n2. Teig in eine Backform geben und bei 180°C ca. 30 Minuten backen.\n3. Abkühlen lassen und genießen.",
+    "nutrition": "Kalorien: 300 kcal\nProtein: 25g\nKohlenhydrate: 20g\nFett: 10g"
   },
-
-{
+  {
     "id": "rezept4",
     "name": "Vollkornbrot mit Ei",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Eier hart kochen.\n2. Vollkornbrot toasten.\n3. Eier in Scheiben schneiden und aufs Brot legen, nach Belieben würzen.",
+    "nutrition": "Kalorien: 400 kcal\nProtein: 22g\nKohlenhydrate: 30g\nFett: 15g"
   },
-
-{
+  {
     "id": "rezept5",
-    "name": "Skyr mit Nüssen ",
+    "name": "Skyr mit Nüssen",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Skyr in eine Schüssel geben.\n2. Mit Nüssen und optional etwas Honig toppen.",
+    "nutrition": "Kalorien: 250 kcal\nProtein: 20g\nKohlenhydrate: 10g\nFett: 12g"
   },
-
-{
+  {
     "id": "rezept6",
     "name": "Lachs mit Süßkartoffeln",
     "type": "recipe",
-    "preparation": "1. Lachs mit Olivenöl anbraten und mit Salz und Pfeffer Würzen.\n2. Süßkartoffeln kochen.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Süßkartoffeln schälen, würfeln und kochen.\n2. Lachs mit Olivenöl anbraten, mit Salz und Pfeffer würzen.\n3. Zusammen servieren.",
+    "nutrition": "Kalorien: 480 kcal\nProtein: 35g\nKohlenhydrate: 25g\nFett: 22g"
   },
-
-{
+  {
     "id": "rezept7",
     "name": "Linsen Curry mit Reis",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
-  }, {
+    "preparation": "1. Zwiebeln und Knoblauch anbraten.\n2. Linsen, Currygewürz und Gemüse hinzufügen, mit Brühe ablöschen.\n3. Köcheln lassen und mit Reis servieren.",
+    "nutrition": "Kalorien: 520 kcal\nProtein: 25g\nKohlenhydrate: 50g\nFett: 18g"
+  },
+  {
     "id": "rezept8",
     "name": "Grillgemüse mit Hummus",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Gemüse in Scheiben schneiden und mit Olivenöl bepinseln.\n2. Grillen oder im Ofen rösten.\n3. Mit Hummus servieren.",
+    "nutrition": "Kalorien: 300 kcal\nProtein: 10g\nKohlenhydrate: 20g\nFett: 18g"
   },
-
-{
+  {
     "id": "rezept9",
     "name": "Vollkorn Thunfisch Pasta",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Pasta kochen.\n2. Thunfisch, Zwiebeln und Tomaten anbraten.\n3. Mit der Pasta mischen und würzen.",
+    "nutrition": "Kalorien: 550 kcal\nProtein: 35g\nKohlenhydrate: 45g\nFett: 20g"
   },
-
-{
+  {
     "id": "rezept10",
     "name": "Nüsse",
     "type": "recipe",
-    "preparation": "",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Eine Handvoll Nüsse auswählen.\n2. Direkt genießen oder ins Müsli geben.",
+    "nutrition": "Kalorien: 200 kcal\nProtein: 7g\nKohlenhydrate: 6g\nFett: 18g"
   },
-
-{
+  {
     "id": "rezept11",
     "name": "Obstsalat",
     "type": "recipe",
-    "preparation": "1.Beliebiges Obst in Würfel schneiden./n2. Würfel nach Belieben mit Honig süßen und ein Wenig Zitrone hinzufügen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
+    "preparation": "1. Beliebiges Obst in Würfel schneiden.\n2. Mit Honig süßen und etwas Zitronensaft dazugeben.",
+    "nutrition": "Kalorien: 180 kcal\nProtein: 3g\nKohlenhydrate: 30g\nFett: 2g"
   },
-
-{
+  {
     "id": "rezept12",
     "name": "Rohkostplatte",
     "type": "recipe",
-    "preparation": "1.Beliebiges Obst und Gemüse schneiden und auf einem Teller Servieren.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 40g\nFett: 8g"
-  },
+    "preparation": "1. Beliebiges Obst und Gemüse in Streifen oder Stücke schneiden.\n2. Auf einem Teller anrichten und nach Wunsch mit Dips servieren.",
+    "nutrition": "Kalorien: 120 kcal\nProtein: 3g\nKohlenhydrate: 20g\nFett: 3g"
+  }
 ]
