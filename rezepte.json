@@ -45,18 +45,24 @@
 
   {
     "id": "rezept7",
-    "name": "Linsen Curry mit Reis",
+    "name": "Rotes Linsen-Curry mit Kokosmilch",
     "type": "recipe",
-    "preparation": "1. Zwiebeln und Knoblauch anbraten.\n2. Linsen, Currygewürz und Gemüse hinzufügen, mit Brühe ablöschen.\n3. Köcheln lassen und mit Reis servieren.",
-    "nutrition": "Kalorien: 520 kcal\nEiweiß: 25g\nKohlenhydrate: 50g\nFett: 18g"
+    "preparation": "1. Knoblauch und Ingwer klein hacken. Tomaten vierteln. Linsen in ein Sieb geben und abspülen.\n2. Öl in einem Topf erhitzen und Knoblauch und Ingwer anbraten. Dann Kreuzkümmel, Zimt und Curry unterheben und kurz anrösten.\n3. Kokosmilch, Gemüsebrühe, Tomaten und Linsen zugeben und aufkochen. Bei mittlerer Hitze 20 Minuten köcheln lassen, bis die Linsen weich sind. Ggf. noch etwas Wasser zugeben. Rote Linsen-Curry mit Salz, Pfeffer und Limettensaft abschmecken.",
+    "nutrition": "Kalorien: 323 kcal\nEiweiß: 17 g\nKohlenhydrate: 47 g\nFett: 7 g"
+    
   },
+
   {
-    "id": "rezept8",
+    "id": "rezept7",
     "name": "Grillgemüse mit Hummus",
     "type": "recipe",
-    "preparation": "1. Gemüse in Scheiben schneiden und mit Olivenöl bepinseln.\n2. Grillen oder im Ofen rösten.\n3. Mit Hummus servieren.",
-    "nutrition": "Kalorien: 300 kcal\nEiweiß: 10g\nKohlenhydrate: 20g\nFett: 18g"
+    "preparation": "1. **Hummus zubereiten:** 1 Dose Kichererbsen (ca. 400 g) abtropfen lassen. 1 Knoblauchzehe halbieren. Kichererbsen, Knoblauch, 60 g Tahina (Sesampaste), 3 EL Olivenöl, 4 EL Wasser, 1 ½ EL Zitronensaft, ½ EL Kreuzkümmelpulver, ¾ TL Salz und wenig Pfeffer in einen Mixbecher geben und fein pürieren. Beiseitestellen.\n2. **Gemüse vorbereiten:** 300 g Snack-Peperoni, 500 g Zucchetti (längs in ca. 1 cm dicke Scheiben) und 380 g Auberginen (in ca. 1 cm dicke Scheiben) mit 2 EL Olivenöl, ¾ TL Salz und wenig Pfeffer in einer Schüssel mischen.\n3. **Tomaten vorbereiten:** 350 g verschiedenfarbige Cherry-Tomaten in eine Grillschale geben, ½ EL Olivenöl darüberträufeln und mit ¼ TL Salz würzen.\n4. **Grillieren:** Peperoni, Zucchetti und Auberginen bei geschlossenem Deckel über mittelstarker Glut bzw. auf mittlerer Stufe (ca. 200 °C) beidseitig je ca. 5 Minuten grillieren. Dabei die Tomaten in der Grillschale ca. 8 Minuten mitgrillieren.\n5. **Anrichten:** Gemüse mit dem Hummus und den beiseitegestellten Kichererbsen auf einer Platte anrichten.",
+    "nutrition": "Kalorien: 386 kcal\nEiweiß: 12 g\nKohlenhydrate: 26 g\nFett: 25 g"
+    
+    
+
   },
+
   {
     "id": "rezept9",
     "name": "After-Work-Thunfischpasta für zwei",
