@@ -1,86 +1,90 @@
 [
   {
     "id": "rezept1",
-    "name": "Protein Shake",
+    "name": "Erdbeer-Bananen-Proteinshake mit Zimtnote",
     "type": "recipe",
-    "preparation": "1. Alle Zutaten in den Mixer geben.\n2. Gut durchmixen, bis cremig.\n3. Sofort genießen.",
-    "nutrition": "Kalorien: 350 kcal\nProtein: 30g\nKohlenhydrate: 20g\nFett: 8g"
+    "preparation": "1. Eine geschälte Banane, 200 ml Milch und 2 gehäufte EL Eweißpulver mit Erdbeergeschmack in einen Mixer geben.\n2. Gut durchmixen, bid es schön schaumig ist.\n3. Sofort genießen.",
+    "nutrition": "Kalorien: 241 kcal\nEiweiß: 24g\nKohlenhydrate: 23,5g\nFett: 4,3g"
   },
   {
     "id": "rezept2",
     "name": "Hähnchen mit Reis und Brokkoli",
     "type": "recipe",
     "preparation": "1. Hähnchenbrust in Scheiben schneiden.\n2. In einer Marinade aus Öl, Sojasoße, Paprikapulver, Knoblauch, Salz und Pfeffer einlegen. Parallel den Reis kochen.\n3. Hähnchen in Olivenöl anbraten, mit dem Reis und Brokkoli servieren.",
-    "nutrition": "Kalorien: 550 kcal\nProtein: 45g\nKohlenhydrate: 60g\nFett: 15g"
+    "nutrition": "Kalorien: 620 kcal\nEiweiß: 50g\nKohlenhydrate: 60g\nFett: 18g"
   },
   {
-    "id": "rezept3",
-    "name": "Quarkbrot",
-    "type": "recipe",
-    "preparation": "1. Quark, Haferflocken, Eier und Backpulver zu einem Teig verrühren.\n2. Teig in eine Backform geben und bei 180°C ca. 30 Minuten backen.\n3. Abkühlen lassen und genießen.",
-    "nutrition": "Kalorien: 300 kcal\nProtein: 25g\nKohlenhydrate: 20g\nFett: 10g"
+  "id": "rezept3",
+  "name": "Quarkbrot mit Kräuterquark",
+  "type": "recipe",
+  "preparation": "1. Eine Scheibe Vollkornbrot abschneiden und nach Wunsch leicht toasten.\n2. 150g Magerquark mit 1 EL Mineralwasser verrühren, bis er cremig ist.\n3. 1 Prise Salz, 1 Prise Pfeffer und 1 Prise Paprikapulver dazugeben.\n4. 1 TL frische Kräuter fein hacken und unterrühren.\n5. Den Quark großzügig auf das Brot streichen.\n6. Optional mit 3-4 Radieschenscheiben, 1/2 Gurke in Scheiben, 1 gekochtem Ei und etwas Kresse belegen.\n7. Nach Belieben ein paar Tropfen Leinöl oder Olivenöl darüberträufeln.\n8. Direkt servieren und genießen.",
+  "nutrition": "Kalorien: ca. 250 kcal\nEiweiß: ca. 20g\nKohlenhydrate: ca. 15g\nFett: ca. 5g"
   },
+
   {
     "id": "rezept4",
     "name": "Vollkornbrot mit Ei",
     "type": "recipe",
     "preparation": "1. Eier hart kochen.\n2. Vollkornbrot toasten.\n3. Eier in Scheiben schneiden und aufs Brot legen, nach Belieben würzen.",
-    "nutrition": "Kalorien: 400 kcal\nProtein: 22g\nKohlenhydrate: 30g\nFett: 15g"
+    "nutrition": "Kalorien: 400 kcal\nEiweiß: 22g\nKohlenhydrate: 30g\nFett: 15g"
   },
   {
     "id": "rezept5",
     "name": "Skyr mit Nüssen",
     "type": "recipe",
     "preparation": "1. Skyr in eine Schüssel geben.\n2. Mit Nüssen und optional etwas Honig toppen.",
-    "nutrition": "Kalorien: 250 kcal\nProtein: 20g\nKohlenhydrate: 10g\nFett: 12g"
+    "nutrition": "Kalorien: 250 kcal\nEiweiß: 20g\nKohlenhydrate: 10g\nFett: 12g"
   },
   {
     "id": "rezept6",
-    "name": "Lachs mit Süßkartoffeln",
+    "name": "Gebackener Lachs auf Süßkartoffel und Brokkoli",
     "type": "recipe",
-    "preparation": "1. Süßkartoffeln schälen, würfeln und kochen.\n2. Lachs mit Olivenöl anbraten, mit Salz und Pfeffer würzen.\n3. Zusammen servieren.",
-    "nutrition": "Kalorien: 480 kcal\nProtein: 35g\nKohlenhydrate: 25g\nFett: 22g"
+    "preparation": "1. Süßkartoffeln schälen, waschen, halbieren und in Spalten schneiden. Mit grobem Salz würzen und mit 2 EL Olivenöl beträufeln. Auf einem Backblech verteilen und im vorgeheizten Backofen (E-Herd: 225 °C/Umluft: 200 °C/Gas: Stufe 4) ca. 20 Minuten garen. Zwischendurch die Kartoffeln vorsichtig wenden.\n2. In der Zwischenzeit Brokkoliröschen vom Strunk schneiden, evtl. halbieren. Lachsfilets kalt abspülen, trocken tupfen und mit grobem Salz würzen. 2 EL Olivenöl in einer großen beschichteten Pfanne erhitzen. Filets darin von jeder Seite 2–3 Minuten braten. Zum Schluss mit Pfeffer würzen. Rosmarin waschen, trocken schütteln, Nadeln, bis auf 2 Zweige zum Garnieren, abstreifen und zum Lachs geben.\n3. Brokkoli in kochendem Salzwasser 4–5 Minuten garen, abgießen, abtropfen lassen.\n4. Süßkartoffeln, Brokkoli und Lachs auf Tellern anrichten. Mit 1 TL Edelsüßpaprika bestreuen und mit Rosmarin garnieren.",
+    "nutrition": "Kalorien: 630 kcal\nEiweiß: 36 g\nFett: 32 g\nKohlenhydrate: 50 g"
   },
+
   {
     "id": "rezept7",
     "name": "Linsen Curry mit Reis",
     "type": "recipe",
     "preparation": "1. Zwiebeln und Knoblauch anbraten.\n2. Linsen, Currygewürz und Gemüse hinzufügen, mit Brühe ablöschen.\n3. Köcheln lassen und mit Reis servieren.",
-    "nutrition": "Kalorien: 520 kcal\nProtein: 25g\nKohlenhydrate: 50g\nFett: 18g"
+    "nutrition": "Kalorien: 520 kcal\nEiweiß: 25g\nKohlenhydrate: 50g\nFett: 18g"
   },
   {
     "id": "rezept8",
     "name": "Grillgemüse mit Hummus",
     "type": "recipe",
     "preparation": "1. Gemüse in Scheiben schneiden und mit Olivenöl bepinseln.\n2. Grillen oder im Ofen rösten.\n3. Mit Hummus servieren.",
-    "nutrition": "Kalorien: 300 kcal\nProtein: 10g\nKohlenhydrate: 20g\nFett: 18g"
+    "nutrition": "Kalorien: 300 kcal\nEiweiß: 10g\nKohlenhydrate: 20g\nFett: 18g"
   },
   {
     "id": "rezept9",
-    "name": "Vollkorn Thunfisch Pasta",
+    "name": "After-Work-Thunfischpasta für zwei",
     "type": "recipe",
-    "preparation": "1. Pasta kochen.\n2. Thunfisch, Zwiebeln und Tomaten anbraten.\n3. Mit der Pasta mischen und würzen.",
-    "nutrition": "Kalorien: 550 kcal\nProtein: 35g\nKohlenhydrate: 45g\nFett: 20g"
+    "preparation": "1. 1 Dose Thunfisch abtropfen lassen. 200 g Vollkornpenne in 2–3 l kochendem Salzwasser (ca. 1 TL Salz pro Liter) nach Packungsanweisung garen.\n2. 1 Zwiebel und 1 Knoblauchzehe schälen und fein hacken. In 1 EL heißem Olivenöl andünsten. 1 Dose (425 ml) stückige Tomaten zugeben, aufkochen und ca. 5 Minuten köcheln lassen. 10 Basilikumblätter waschen. Mit dem Thunfisch zur Soße geben. Mit Salz, Pfeffer und 1 Prise Zucker abschmecken.\n3. Nudeln abgießen, mit der Soße mischen und anrichten.",
+    "nutrition": "Kalorien: 550 kcal\nEiweiß: 32 g\nKohlenhydrate: 82 g\nFett: 9 g",
+    "source": "https://www.lecker.de/after-work-thunfischpasta-fuer-zwei-45399.html"
   },
+
   {
     "id": "rezept10",
     "name": "Nüsse",
     "type": "recipe",
     "preparation": "1. Eine Handvoll Nüsse auswählen.\n2. Direkt genießen oder ins Müsli geben.",
-    "nutrition": "Kalorien: 200 kcal\nProtein: 7g\nKohlenhydrate: 6g\nFett: 18g"
+    "nutrition": "Kalorien: 200 kcal\nEiweiß: 7g\nKohlenhydrate: 6g\nFett: 18g"
   },
   {
     "id": "rezept11",
     "name": "Obstsalat",
     "type": "recipe",
     "preparation": "1. Beliebiges Obst in Würfel schneiden.\n2. Mit Honig süßen und etwas Zitronensaft dazugeben.",
-    "nutrition": "Kalorien: 180 kcal\nProtein: 3g\nKohlenhydrate: 30g\nFett: 2g"
+    "nutrition": "Kalorien: 180 kcal\nEiweiß: 3g\nKohlenhydrate: 30g\nFett: 2g"
   },
   {
     "id": "rezept12",
     "name": "Rohkostplatte",
     "type": "recipe",
     "preparation": "1. Beliebiges Obst und Gemüse in Streifen oder Stücke schneiden.\n2. Auf einem Teller anrichten und nach Wunsch mit Dips servieren.",
-    "nutrition": "Kalorien: 120 kcal\nProtein: 3g\nKohlenhydrate: 20g\nFett: 3g"
+    "nutrition": "Kalorien: 120 kcal\nEiweiß: 3g\nKohlenhydrate: 20g\nFett: 3g"
   }
 ]
