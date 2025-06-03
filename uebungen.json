@@ -3,7 +3,7 @@
     "id": "liegestuetze",
     "name": "Liegestütze",
     "type": "exercise",
-    "imageUrl": "images/liegestuetze.png",
+    "imageUrl": "images/liegestütz.png",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"]
   },
   {
