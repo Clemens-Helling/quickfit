@@ -31,7 +31,7 @@
     "id": "klimmzuege",
     "name": "Klimmzüge",
     "type": "exercise",
-    "imageUrl": "images/klimmzuege.jpg",
+    "imageUrl": "images/klimzuege.png",
     "muscles": ["Core", "Bauchmuskeln", "Arme"]
   },
   {
@@ -87,14 +87,14 @@
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
-    "imageUrl": "images/burpes.jepg",
+    "imageUrl": "images/burpes.png",
     "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"]
   },
   {
     "id": "mountain-climbers",
     "name": "Mountain Climbers",
     "type": "exercise",
-    "imageUrl": "images/mountainclimbers.png",
+    "imageUrl": "images/mountainclibers.png",
     "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
   },
   {
