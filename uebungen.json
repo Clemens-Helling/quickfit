@@ -55,13 +55,7 @@
     "imageUrl": "images/321-squads.jpeg",
     "muscles": ["Beine"]
   },
-  {
-    "id": "squats",
-    "name": "Squats",
-    "type": "exercise",
-    "imageUrl": "images/squads.png",
-    "muscles": ["Beine"]
-  },
+
   {
     "id": "ausfallschritte",
     "name": "Ausfallschritte",
@@ -73,7 +67,7 @@
     "id": "jump-squats",
     "name": "Jump-Squats",
     "type": "exercise",
-    "imageUrl": "images/jumpsquats.gif",
+    "imageUrl": "images/jumpsquads.png",
     "muscles": ["Oberschenkel", "Unterschenkel", "Core"]
   },
   {
