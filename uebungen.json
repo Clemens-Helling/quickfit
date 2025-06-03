@@ -38,7 +38,7 @@
     "id": "situps",
     "name": "Sit-ups",
     "type": "exercise",
-    "imageUrl": "images/situps.gif",
+    "imageUrl": "images/situps.png",
     "muscles": ["Core", "Bauchmuskeln"]
   },
   {
@@ -52,7 +52,7 @@
     "id": "321-squads",
     "name": "3-2-1-Squats",
     "type": "exercise",
-    "imageUrl": "images/321-squats.jpeg",
+    "imageUrl": "images/321-squads.jpeg",
     "muscles": ["Beine"]
   },
   {
@@ -66,7 +66,7 @@
     "id": "ausfallschritte",
     "name": "Ausfallschritte",
     "type": "exercise",
-    "imageUrl": "images/lunges.gif",
+    "imageUrl": "images/ausfallschritte.png",
     "muscles": ["Core", "Unterschenkel", "Oberschenkel"]
   },
   {
@@ -80,7 +80,7 @@
     "id": "superman",
     "name": "Superman",
     "type": "exercise",
-    "imageUrl": "images/superman.gif",
+    "imageUrl": "images/superman.png",
     "muscles": ["Rücken", "Core", "Beine"]
   },
   {
