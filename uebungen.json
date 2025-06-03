@@ -3,14 +3,14 @@
     "id": "liegestuetze",
     "name": "Liegestütze",
     "type": "exercise",
-    "imageUrl": "images/liegestuetze.jpg",
+    "imageUrl": "images/liegestuetz.png",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"]
   },
   {
     "id": "kniebeugen",
     "name": "Kniebeugen",
     "type": "exercise",
-    "imageUrl": "images/kniebeugen.png",
+    "imageUrl": "images/squads.png",
     "muscles": ["Beine", "Gesäß", "Core"]
   },
   {
@@ -94,7 +94,7 @@
     "id": "mountain-climbers",
     "name": "Mountain Climbers",
     "type": "exercise",
-    "imageUrl": "images/mountainclimbers.gif",
+    "imageUrl": "images/mountainclimbers.png",
     "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
   },
   {
