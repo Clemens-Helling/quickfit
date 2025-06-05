@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainingsplan Gestalter</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F4F0; /* Light greenish grey */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow: auto;
+}
+
+header {
+    background-color: #2A5C3D; /* Deep Green */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #2A5C3D; /* Deep Green */
+    padding: 0.5rem;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    text-decoration: underline;
+}
+
+.content-section {
+    background-color: #fff; /* Keep white for clean content areas */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.content-section h2 {
+    color: #2A5C3D; /* Heading color to match theme */
+    border-bottom: 2px solid #e0e0e0; /* Lighter border */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    margin-top: 10px;
+    background-color: #E9F5E9; /* Light green tint for item list background */
+    min-height: 50px;
+}
+
+.item {
+    background-color: #5cb85c; /* A pleasant, medium green */
+    border: 1px solid #4cae4c; /* Darker shade for border */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.item:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+.item:active {
+    cursor: grabbing;
+    background-color: #449d44; /* Even darker green when active */
+}
+
+.item .details-btn {
+    padding: 4px 8px;
+    font-size: 0.85em;
+    cursor: pointer;
+    background-color: #3e8e41; /* A distinct, darker green */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.item .details-btn:hover {
+    background-color: #2A5C3D; /* Match header green on hover */
+}
+
+#trainingsplan-bereich .plan-tag {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd; /* Keep light for contrast within plan days */
+}
+
+#trainingsplan-bereich .plan-tag h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #2A5C3D; /* Theme color for day headings */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.plan-area {
+    min-height: 80px;
+    padding: 10px;
+    border: 2px dashed #5cb85c; /* Green dashed border */
+    background-color: #E9F5E9; /* Light green background */
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-content: flex-start;
+}
+
+.plan-area.drag-over {
+    border-style: solid;
+    border-color: #4cae4c; /* Darker green border on drag over */
+    background-color: #DFF0D8; /* Lighter green background on drag over */
+}
+
+.planned-item {
+    background-color: #e0e0e0; 
+    border: 1px solid #bdbdbd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.planned-item.recipe-planned {
+    background-color: #A3D9A5; /* Light green for recipes */
+    border-color: #77B577; /* Slightly darker green border */
+    color: #1E4620; /* Dark green text for readability */
+}
+
+.planned-item.exercise-planned {
+    background-color: #8BCDA3; /* Another light green for exercises */
+    border-color: #6FAA81; /* Slightly darker green border */
+    color: #1E4620; /* Dark green text */
+}
+
+.planned-item .remove-btn {
+    margin-left: 10px;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.planned-item .remove-btn:hover {
+    background-color: #f1b0b7;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    width: 85%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #2A5C3D; /* Modal title in theme color */
+}
+
+.modal-content h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #4CAF50; /* Sub-headings in a lighter, vibrant green */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 3px;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.modal-content ul li {
+    margin-bottom: 5px;
+}
+
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #2A5C3D; /* Theme color for close button hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #2A5C3D; /* Deep Green */
+    color: #fff;
+}
+
+.info-h1 {
+    color: #333; /* Deep Green */
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 100px;
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+p {
+    padding: 0 30px;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: #333; /* Dark text for readability */
+    text-align: left;
+    font-size: 20px;
+    padding-left: 100px;
+}
+.ul-info {
+    padding: 0 30px;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: #333; /* Dark text for readability */
+    text-align: left;
+    justify-self : left;
+    padding-left: 100px;
+    padding-bottom: 30px;
+    
+}
+.li-info {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333; /* Dark text for readability */
+    
+}
+/* Responsive Nav */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mein Trainings- und Ernährungsplaner</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#uebungen-bereich">Übungen</a></li>
+            <li><a href="#rezepte-bereich">Rezepte</a></li>
+            <li><a href="#trainingsplan-bereich">Mein Plan</a></li>
+            <li><a href="kalorienrechner.html">Kalorienrechner</a></li>
+            <li><a href="infos.html">Infos</a></li>
+
+        </ul>
+    </nav>
+    <h1 class=" info-h1">Voraussetzungen für Muskelaufbau</h1>
+    <p>
+        Muskeln bauen sich nur auf wenn sie beansprucht werden. Das bedeutet, dass du regelmäßig trainieren musst, um Fortschritte zu sehen. Hier sind einige wichtige Punkte, die du beachten solltest:
+    </p>
+    <ul class = ul-info>
+        <li>Trainiere 2-3 mal pro Woche</li>
+        <li>Muskeln brauchen Energie um zu wachsen. Daher solltest du immer einen Kalorienüberschuss von ca. 200 kcal haben. Diesen kannst du <a href= kalorienrechner.html>hier</a> berechnen</li>
+        <li>Iss ausreichend Eiweiß, um den Muskelaufbau zu unterstützen. Eine gute Faustregel ist, mindestens 1,6 g Eiweiß pro Kilogramm Körpergewicht zu konsumieren.</li>
+        <li>Schlaf ist wichtig für die Regeneration und den Muskelaufbau. Versuche, mindestens 7-8 Stunden Schlaf pro Nacht zu bekommen.</li>
+        <li>Trinke ausreichend Wasser, um hydriert zu bleiben. Eine gute Faustregel ist, mindestens 2-3 Liter Wasser pro Tag zu trinken.</li>
+
+    </ul>
+    <hr>
+
+
+    <h1 class="info-h1"> Proteine</h1>
+    <p>
+        Proteine sind die Bausteine der Muskeln und spielen eine entscheidende Rolle beim Muskelaufbau. Hier sind einige proteinreiche Lebensmittel, die du in deine Ernährung einbauen kannst:
+    <ul class="ul-info">
+        <li>Hänchenbrust</li>
+        <li>Magerquark</li>
+        <li>Linsen</li>
+        <li>Kirchererbsen</li>
+        <li>Eier</li>
+        <li>Thunfisch</li>
+        <li>Tofu</li>
+        <li>Skyr</li>
+        <li>Proteinpulver</li>
+        
+    </ul>
+    <hr>
+
+    
+</body>
