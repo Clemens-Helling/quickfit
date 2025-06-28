@@ -104,6 +104,13 @@
     "type": "exercise",
     "imageUrl": "images/hampelman.png",
     "muscles": ["Beine", "Arme", "Core", "Ausdauer"]
+  },
+  {
+    "id": "pause",
+    "name": "Pause",
+    "type": "exercise",
+    "imageUrl": "images/pause.png",
+    "muscles": []
   }
 
 ]
