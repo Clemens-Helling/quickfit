@@ -100,6 +100,10 @@ nav ul li a:hover, nav ul li a.active {
     align-items: center;
 }
 
+.item span[style*="color: red"] {
+    text-shadow: 0 0 2px #fff;
+}
+
 .item-name {
     flex-grow: 1;
     margin-right: 5px;
@@ -308,6 +312,12 @@ footer {
     }
 }
 
+/* Kachel für schwere Übungen komplett rot einfärben */
+.item.schwer {
+    background-color: #ffdddd !important;
+    border-color: #ff4444 !important;
+    color: #a10000 !important;
+}
     </style>
 </head>
 <body>
@@ -521,71 +531,92 @@ footer {
             // Note: Ensure your uebungen.json contains 'imageUrl', 'muscles', 'sets', 'reps', 'description' for exercises.
             // Example: { "id": "squats", "name": "Kniebeugen", "type": "exercise", "imageUrl": "images/squats.jpg", "muscles": ["Quadrizeps", "Gesäß"], "sets": 3, "reps": 15, "description": "Kniebeugen trainieren die Beine und den Po." }
             function createExerciseElement(exercise) {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'item';
-                itemDiv.draggable = true;
-                itemDiv.id = exercise.id;
-                itemDiv.dataset.type = exercise.type;
-                itemDiv.dataset.name = exercise.name; 
-                if (exercise.imageUrl) {
-                    itemDiv.dataset.imageUrl = exercise.imageUrl;
-                }
-                if (exercise.muscles && Array.isArray(exercise.muscles)) {
-                    itemDiv.dataset.muscles = JSON.stringify(exercise.muscles);
-                }
-                if (exercise.sets) {
-                    itemDiv.dataset.sets = exercise.sets;
-                }
-                if (exercise.reps) {
-                    itemDiv.dataset.reps = exercise.reps;
-                }
-                if (exercise.description) {
-                    itemDiv.dataset.description = exercise.description;
-                }
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'item';
+    itemDiv.draggable = true;
+    itemDiv.id = exercise.id;
+    itemDiv.dataset.type = exercise.type;
+    itemDiv.dataset.name = exercise.name; 
+    if (exercise.imageUrl) {
+        itemDiv.dataset.imageUrl = exercise.imageUrl;
+    }
+    if (exercise.muscles && Array.isArray(exercise.muscles)) {
+        itemDiv.dataset.muscles = JSON.stringify(exercise.muscles);
+    }
+    if (exercise.sets) {
+        itemDiv.dataset.sets = exercise.sets;
+    }
+    if (exercise.reps) {
+        itemDiv.dataset.reps = exercise.reps;
+    }
+    if (exercise.description) {
+        itemDiv.dataset.description = exercise.description;
+    }
+    if (exercise.difficulty) {
+        itemDiv.dataset.difficulty = exercise.difficulty;
+        if (exercise.difficulty.toLowerCase() === "schwer") {
+            itemDiv.classList.add('schwer');
+        }
+    }
 
-                const itemNameSpan = document.createElement('span');
-                itemNameSpan.className = 'item-name';
-                itemNameSpan.textContent = exercise.name;
-                itemDiv.appendChild(itemNameSpan);
+    const itemNameSpan = document.createElement('span');
+    itemNameSpan.className = 'item-name';
+    itemNameSpan.textContent = exercise.name;
+    itemDiv.appendChild(itemNameSpan);
 
-                // Sätze und Wiederholungen anzeigen
-                const setsRepsSpan = document.createElement('span');
-                setsRepsSpan.style.marginLeft = "8px";
-                setsRepsSpan.style.fontSize = "0.95em";
-                setsRepsSpan.style.color = "#e0ffe0";
-                setsRepsSpan.textContent = 
-                    (exercise.sets ? `${exercise.sets} Sätze` : "") +
-                    (exercise.sets && exercise.reps ? " x " : "") +
-                    (exercise.reps ? `${exercise.reps} Wdh.` : "");
-                if (setsRepsSpan.textContent.trim() !== "") {
-                    itemDiv.appendChild(setsRepsSpan);
-                }
+    // Schwierigkeit anzeigen
+    if (exercise.difficulty) {
+        // Entferne diesen Block komplett, damit kein Text zur Schwierigkeit mehr angezeigt wird
+        // const diffSpan = document.createElement('span');
+        // diffSpan.textContent = exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1);
+        // diffSpan.style.marginLeft = "8px";
+        // diffSpan.style.fontWeight = "bold";
+        // if (exercise.difficulty.toLowerCase() === "schwer") {
+        //     diffSpan.style.color = "red";
+        // } else {
+        //     diffSpan.style.color = "green";
+        // }
+        // itemDiv.appendChild(diffSpan);
+    }
 
-                const detailsButton = document.createElement('button');
-                detailsButton.className = 'details-btn';
-                detailsButton.type = 'button';
-                detailsButton.textContent = 'Details';
-                itemDiv.appendChild(detailsButton);
+    // Sätze und Wiederholungen anzeigen
+    const setsRepsSpan = document.createElement('span');
+    setsRepsSpan.style.marginLeft = "8px";
+    setsRepsSpan.style.fontSize = "0.95em";
+    setsRepsSpan.style.color = "#e0ffe0";
+    setsRepsSpan.textContent = 
+        (exercise.sets ? `${exercise.sets} Sätze` : "") +
+        (exercise.sets && exercise.reps ? " x " : "") +
+        (exercise.reps ? `${exercise.reps} Wdh.` : "");
+    if (setsRepsSpan.textContent.trim() !== "") {
+        itemDiv.appendChild(setsRepsSpan);
+    }
 
-                detailsButton.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const imageUrl = itemDiv.dataset.imageUrl;
-                    const musclesString = itemDiv.dataset.muscles || '[]';
-                    let musclesArray = [];
-                    try {
-                        musclesArray = JSON.parse(musclesString);
-                    } catch (err) {
-                        console.error("Fehler beim Parsen der Muskel-Daten:", err);
-                    }
-                    openExerciseModal(
-                        exercise.name,
-                        imageUrl,
-                        musclesArray,
-                        exercise.sets,
-                        exercise.reps,
-                        exercise.description
-                    );
-                });
+    const detailsButton = document.createElement('button');
+    detailsButton.className = 'details-btn';
+    detailsButton.type = 'button';
+    detailsButton.textContent = 'Details';
+    itemDiv.appendChild(detailsButton);
+
+    detailsButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const imageUrl = itemDiv.dataset.imageUrl;
+        const musclesString = itemDiv.dataset.muscles || '[]';
+        let musclesArray = [];
+        try {
+            musclesArray = JSON.parse(musclesString);
+        } catch (err) {
+            console.error("Fehler beim Parsen der Muskel-Daten:", err);
+        }
+        openExerciseModal(
+            exercise.name,
+            imageUrl,
+            musclesArray,
+            exercise.sets,
+            exercise.reps,
+            exercise.description
+        );
+    });
                 
                 addItemDragListeners(itemDiv);
                 return itemDiv;

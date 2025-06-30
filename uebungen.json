@@ -42,7 +42,8 @@
     "name": "Sit-ups",
     "type": "exercise",
     "imageUrl": "images/situps.png",
-    "muscles": ["Core", "Bauchmuskeln"]
+    "muscles": ["Core", "Bauchmuskeln"],
+    "difficulty": "leicht"
   },
   {
     "id": "crunches",
@@ -81,11 +82,20 @@
     "muscles": ["Rücken", "Core", "Beine"]
   },
   {
+    "id": "burpeesschwer",
+    "name": "Burpees",
+    "type": "exercise",
+    "imageUrl": "images/burpes.png",
+    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
+    "difficulty": "schwer"
+  },
+  {
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
     "imageUrl": "images/burpes.png",
-    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"]
+    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
+    "difficulty": "leicht"
   },
   {
     "id": "mountain-climbers",
