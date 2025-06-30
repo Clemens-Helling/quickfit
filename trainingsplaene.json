@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Muskelaufbau",
+    "plan": {
+      "montag": [
+        { "name": "Klimmzüge", "type": "exercise" },
+        { "name": "Liegestütze", "type": "exercise" },
+        { "name": "Erdbeer-Bananen-Proteinshake mit Zimtnote", "type": "recipe" }
+      ],
+      "dienstag": [
+        { "name": "Kniebeugen", "type": "exercise" },
+        { "name": "Superman", "type": "exercise" },
+        { "name": "Hähnchen mit Reis und Brokkoli", "type": "recipe" }
+      ],
+      "mittwoch": [
+        { "name": "Ausfallschritte", "type": "exercise" },
+        { "name": "Sit-ups", "type": "exercise" },
+        { "name": "Skyr mit Nüssen", "type": "recipe" }
+      ],
+      "donnerstag": [
+        { "name": "Beidseitiges Armdrücken", "type": "exercise" },
+        { "name": "Crunches", "type": "exercise" },
+        { "name": "Vollkornbrot mit Ei", "type": "recipe" }
+      ],
+      "freitag": [
+        { "name": "Klimmzüge", "type": "exercise" },
+        { "name": "3-2-1-Squats", "type": "exercise" },
+        { "name": "Gebackener Lachs auf Süßkartoffel und Brokkoli", "type": "recipe" }
+      ],
+      "samstag": [{"name": "Pause", "type": "exercise"}],
+      "sonntag": [{"name": "Pause", "type": "exercise"}]
+    }
+  },
+  {
+    "name": "Kraftausdauer",
+    "plan": {
+      "montag": [
+        { "name": "Burpees", "type": "exercise" },
+        { "name": "Mountain Climbers", "type": "exercise" },
+        { "name": "Obstsalat", "type": "recipe" }
+      ],
+      "dienstag": [
+        { "name": "Jump-Squats", "type": "exercise" },
+        { "name": "High Knees", "type": "exercise" },
+        { "name": "Rotes Linsen-Curry mit Kokosmilch", "type": "recipe" }
+      ],
+      "mittwoch": [
+        { "name": "Plank", "type": "exercise" },
+        { "name": "Hampelmänner", "type": "exercise" },
+        { "name": "Quarkbrot mit Kräuterquark", "type": "recipe" }
+      ],
+      "donnerstag": [
+        { "name": "Sit-ups", "type": "exercise" },
+        { "name": "Jumping Jacks", "type": "exercise" },
+        { "name": "Rohkostplatte", "type": "recipe" }
+      ],
+      "freitag": [
+        { "name": "Ausfallschritte", "type": "exercise" },
+        { "name": "Crunches", "type": "exercise" },
+        { "name": "Grillgemüse mit Hummus", "type": "recipe" }
+      ],
+      "samstag": [{"name": "Pause", "type": "exercise"}],
+      "sonntag": [{"name": "Pause", "type": "exercise"}]
+    }
+  }
+]

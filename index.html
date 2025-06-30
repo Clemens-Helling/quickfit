@@ -129,63 +129,85 @@ nav ul li a:hover, nav ul li a.active {
     background-color: #2A5C3D; /* Match header green on hover */
 }
 
-#trainingsplan-bereich .plan-tag {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fdfdfd; /* Keep light for contrast within plan days */
+/* Style für den Trainingsplan-Bereich */
+#trainingsplan-bereich {
+    background-color: #f7fff7;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(42,92,61,0.08);
+    padding: 25px 20px 30px 20px;
+    margin-bottom: 30px;
+    border: 1.5px solid #A3D9A5;
 }
 
-#trainingsplan-bereich .plan-tag h3 {
+#trainingsplan-bereich h2 {
+    color: #2A5C3D;
     margin-top: 0;
-    font-size: 1.2em;
-    color: #2A5C3D; /* Theme color for day headings */
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.trainingsplan-controls {
+    margin-bottom: 18px;
+}
+
+.plan-tag {
+    background: #e9f5e9;
+    border: 1px solid #b8e0c6;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    padding: 15px 12px;
+    box-shadow: 0 1px 4px rgba(42,92,61,0.04);
+}
+
+.plan-tag h3 {
+    color: #2A5C3D;
+    margin-top: 0;
     margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #d0e8d0;
+    padding-bottom: 4px;
 }
 
 .plan-area {
-    min-height: 80px;
-    padding: 10px;
-    border: 2px dashed #5cb85c; /* Green dashed border */
-    background-color: #E9F5E9; /* Light green background */
+    background: #f7fff7;
+    border: 2px dashed #A3D9A5;
     border-radius: 4px;
+    min-height: 60px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    align-content: flex-start;
 }
 
 .plan-area.drag-over {
     border-style: solid;
-    border-color: #4cae4c; /* Darker green border on drag over */
-    background-color: #DFF0D8; /* Lighter green background on drag over */
+    border-color: #4cae4c;
+    background-color: #DFF0D8;
 }
 
 .planned-item {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     border: 1px solid #bdbdbd;
     padding: 8px 12px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #333;
+    margin-bottom: 4px;
 }
 
 .planned-item.recipe-planned {
-    background-color: #A3D9A5; /* Light green for recipes */
-    border-color: #77B577; /* Slightly darker green border */
-    color: #1E4620; /* Dark green text for readability */
+    background-color: #A3D9A5;
+    border-color: #77B577;
+    color: #1E4620;
 }
 
 .planned-item.exercise-planned {
-    background-color: #8BCDA3; /* Another light green for exercises */
-    border-color: #6FAA81; /* Slightly darker green border */
-    color: #1E4620; /* Dark green text */
+    background-color: #8BCDA3;
+    border-color: #6FAA81;
+    color: #1E4620;
 }
 
 .planned-item .remove-btn {
@@ -321,7 +343,13 @@ footer {
 
         <section id="trainingsplan-bereich" class="content-section">
             <h2>Mein Wochenplan</h2>
-            <p>Ziehe Übungen und Rezepte per Drag & Drop in die gewünschten Tage.</p>
+        
+            
+            <!-- Dropdown für gespeicherte Trainingspläne -->
+            <div class="trainingsplan-controls" style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;"></div>
+                <select id="trainingsplan-auswahl" style="padding: 8px 12px; border-radius: 4px; border: 1px solid #ccc; flex-grow: 1; font-size: 16px; color: #333; background-color: #f9f9f9;"></select>
+                <button id="trainingsplan-laden-btn" type="button" style="padding: 8px 15px; background-color: #2A5C3D; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.2s;">Trainingsplan laden</button>
+                <p>Ziehe Übungen und Rezepte per Drag & Drop in die gewünschten Tage.</p>
             
             <div class="plan-tag" id="montag">
                 <h3>Montag</h3>
@@ -353,6 +381,8 @@ footer {
             </div>
         </section>
     </div>
+            </div>
+            
 
     <!-- Recipe Detail Modal -->
     <div id="recipeModal" class="modal">
@@ -488,8 +518,8 @@ footer {
                 });
             }
 
-            // Note: Ensure your uebungen.json contains 'imageUrl' and 'muscles' (array of strings) for exercises.
-            // Example: { "id": "squats", "name": "Kniebeugen", "type": "exercise", "imageUrl": "images/squats.jpg", "muscles": ["Quadrizeps", "Gesäß"] }
+            // Note: Ensure your uebungen.json contains 'imageUrl', 'muscles', 'sets', 'reps', 'description' for exercises.
+            // Example: { "id": "squats", "name": "Kniebeugen", "type": "exercise", "imageUrl": "images/squats.jpg", "muscles": ["Quadrizeps", "Gesäß"], "sets": 3, "reps": 15, "description": "Kniebeugen trainieren die Beine und den Po." }
             function createExerciseElement(exercise) {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'item';
@@ -503,11 +533,33 @@ footer {
                 if (exercise.muscles && Array.isArray(exercise.muscles)) {
                     itemDiv.dataset.muscles = JSON.stringify(exercise.muscles);
                 }
+                if (exercise.sets) {
+                    itemDiv.dataset.sets = exercise.sets;
+                }
+                if (exercise.reps) {
+                    itemDiv.dataset.reps = exercise.reps;
+                }
+                if (exercise.description) {
+                    itemDiv.dataset.description = exercise.description;
+                }
 
                 const itemNameSpan = document.createElement('span');
                 itemNameSpan.className = 'item-name';
                 itemNameSpan.textContent = exercise.name;
                 itemDiv.appendChild(itemNameSpan);
+
+                // Sätze und Wiederholungen anzeigen
+                const setsRepsSpan = document.createElement('span');
+                setsRepsSpan.style.marginLeft = "8px";
+                setsRepsSpan.style.fontSize = "0.95em";
+                setsRepsSpan.style.color = "#e0ffe0";
+                setsRepsSpan.textContent = 
+                    (exercise.sets ? `${exercise.sets} Sätze` : "") +
+                    (exercise.sets && exercise.reps ? " x " : "") +
+                    (exercise.reps ? `${exercise.reps} Wdh.` : "");
+                if (setsRepsSpan.textContent.trim() !== "") {
+                    itemDiv.appendChild(setsRepsSpan);
+                }
 
                 const detailsButton = document.createElement('button');
                 detailsButton.className = 'details-btn';
@@ -525,7 +577,14 @@ footer {
                     } catch (err) {
                         console.error("Fehler beim Parsen der Muskel-Daten:", err);
                     }
-                    openExerciseModal(exercise.name, imageUrl, musclesArray);
+                    openExerciseModal(
+                        exercise.name,
+                        imageUrl,
+                        musclesArray,
+                        exercise.sets,
+                        exercise.reps,
+                        exercise.description
+                    );
                 });
                 
                 addItemDragListeners(itemDiv);
@@ -625,7 +684,7 @@ footer {
             }
 
             // --- Exercise Modal Logic ---
-            function openExerciseModal(name, imageUrl, muscles) {
+            function openExerciseModal(name, imageUrl, muscles, sets, reps, description) {
                 modalExerciseName.textContent = name;
 
                 if (imageUrl) {
@@ -638,7 +697,21 @@ footer {
                     modalExerciseImage.style.display = 'none';
                 }
                 
-                modalExerciseMusclesList.innerHTML = ''; // Clear previous muscles
+                // Beschreibung, Sätze und Wiederholungen anzeigen
+                let descHtml = "";
+                if (description) {
+                    descHtml += `<p><strong>Beschreibung:</strong> ${description}</p>`;
+                }
+                if (sets || reps) {
+                    descHtml += `<p><strong>Sätze/Wiederholungen:</strong> `;
+                    if (sets) descHtml += `${sets} Sätze`;
+                    if (sets && reps) descHtml += " x ";
+                    if (reps) descHtml += `${reps} Wdh.`;
+                    descHtml += `</p>`;
+                }
+                modalExerciseMusclesHeader.insertAdjacentHTML('afterend', descHtml);
+
+                modalExerciseMusclesList.innerHTML = '';
                 if (muscles && Array.isArray(muscles) && muscles.length > 0) {
                     muscles.forEach(muscle => {
                         const li = document.createElement('li');
@@ -675,12 +748,47 @@ footer {
             
             // --- Initial Load ---
             async function initializeApp() {
+                await ladeTrainingsplaene();
                 await loadItems('uebungen.json', uebungenContainer, createExerciseElement);
                 await loadItems('rezepte.json', rezepteContainer, createRecipeElement);
                 loadPlan();
             }
 
             initializeApp();
+
+            
+
+
+// --- Trainingsplan Auswahl und Laden ---
+const trainingsplanAuswahl = document.getElementById('trainingsplan-auswahl');
+const trainingsplanLadenBtn = document.getElementById('trainingsplan-laden-btn');
+let trainingsplaene = [];
+
+async function ladeTrainingsplaene() {
+    try {
+        const response = await fetch('trainingsplaene.json');
+        if (!response.ok) throw new Error('Fehler beim Laden der Trainingspläne');
+        trainingsplaene = await response.json();
+        trainingsplanAuswahl.innerHTML = "";
+        trainingsplaene.forEach((plan, idx) => {
+            const opt = document.createElement('option');
+            opt.value = idx;
+            opt.textContent = plan.name;
+            trainingsplanAuswahl.appendChild(opt);
+        });
+    } catch (e) {
+        trainingsplanAuswahl.innerHTML = "<option>Fehler beim Laden</option>";
+    }
+}
+
+trainingsplanLadenBtn.onclick = function() {
+    const idx = trainingsplanAuswahl.value;
+    if (trainingsplaene[idx]) {
+        localStorage.setItem('meinWochenplan', JSON.stringify(trainingsplaene[idx].plan));
+        loadPlan();
+    }
+};
+
         });
     </script>
 

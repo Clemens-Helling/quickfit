@@ -4,7 +4,10 @@
     "name": "Liegestütze",
     "type": "exercise",
     "imageUrl": "images/liegestütz.png",
-    "muscles": ["Brust", "Schultern", "Trizeps", "Core"]
+    "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
+    "sets": 3,
+    "reps": 12,
+    "description": "Klassische Übung für Oberkörper und Core."
   },
   {
     "id": "kniebeugen",
