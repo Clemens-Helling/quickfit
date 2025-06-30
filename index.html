@@ -358,7 +358,8 @@ footer {
             <!-- Dropdown für gespeicherte Trainingspläne -->
             <div class="trainingsplan-controls" style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;"></div>
                 <select id="trainingsplan-auswahl" style="padding: 8px 12px; border-radius: 4px; border: 1px solid #ccc; flex-grow: 1; font-size: 16px; color: #333; background-color: #f9f9f9;"></select>
-                <button id="trainingsplan-laden-btn" type="button" style="padding: 8px 15px; background-color: #2A5C3D; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.2s;">Trainingsplan laden</button>
+                <button id="trainingsplan-laden-btn" type="button" style="margin: 10px 0 20px 10px;padding: 8px 15px; background-color: #2A5C3D; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.2s;">Trainingsplan laden</button>
+                <button id="plan-loeschen-btn" style="margin: 10px 0 20px 10px; padding: 8px 15px; background-color: #d9534f; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Trainingsplan löschen</button>
                 <p>Ziehe Übungen und Rezepte per Drag & Drop in die gewünschten Tage.</p>
             
             <div class="plan-tag" id="montag">
@@ -425,6 +426,13 @@ footer {
     </footer>
 
     <script>
+        document.getElementById('plan-loeschen-btn').onclick = function() {
+    if (confirm('Möchtest du wirklich deinen Trainingsplan löschen?')) {
+        localStorage.removeItem('meinWochenplan');
+        location.reload();
+    }
+};
+
         document.addEventListener('DOMContentLoaded', () => {
             const planAreas = document.querySelectorAll('.plan-area');
             let draggedItem = null;

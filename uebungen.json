@@ -81,14 +81,7 @@
     "imageUrl": "images/superman.png",
     "muscles": ["Rücken", "Core", "Beine"]
   },
-  {
-    "id": "burpeesschwer",
-    "name": "Burpees",
-    "type": "exercise",
-    "imageUrl": "images/burpes.png",
-    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
-    "difficulty": "schwer"
-  },
+
   {
     "id": "burpees",
     "name": "Burpees",
@@ -124,6 +117,14 @@
     "type": "exercise",
     "imageUrl": "images/pause.png",
     "muscles": []
+  },
+    {
+    "id": "burpeesschwer",
+    "name": "Burpees",
+    "type": "exercise",
+    "imageUrl": "images/burpes.png",
+    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
+    "difficulty": "schwer"
   }
 
 ]
