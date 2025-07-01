@@ -6,8 +6,8 @@
     "imageUrl": "images/Liegestütze_e.png",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
     "sets": 3,
-    "reps": 12,
-    "description": "Klassische Übung für Oberkörper und Core."
+    "reps": 15,
+    "description": "Hände schulterbreit unter den Schultern, Körper in einer Linie, Arme beugen und Brust Richtung Boden."
   },
     {
     "id": "liegestuetze_schwer",
@@ -16,8 +16,8 @@
     "imageUrl": "images/liegestuetze_s.png",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
     "sets": 3,
-    "reps": 12,
-    "description": "Klassische Übung für Oberkörper und Core.",
+    "reps": 15,
+    "description": "Hände schulterbreit unter den Schultern, Körper in einer Linie, Arme beugen und Brust Richtung Boden.",
     "difficulty": "schwer"
   },
   {
@@ -25,7 +25,10 @@
     "name": "Kniebeugen",
     "type": "exercise",
     "imageUrl": "images/Squads_e.png",
-    "muscles": ["Beine", "Gesäß", "Core"]
+    "muscles": ["Beine", "Gesäß", "Core"],
+    "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
+    "sets": 3,
+    "reps": 20
   },
   {
     "id": "kniebeugen_schwer",
@@ -33,7 +36,10 @@
     "type": "exercise",
     "imageUrl": "images/Squads_s.png",
     "muscles": ["Beine", "Gesäß", "Core"],
-    "difficulty": "schwer"
+    "difficulty": "schwer",
+    "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
+    "sets": 3,
+    "reps": 20
   },
   
   {
@@ -41,29 +47,40 @@
     "name": "Plank",
     "type": "exercise",
     "imageUrl": "images/Plank.png",
-    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
-  },
+    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"],
+    "description": "Unterarme auf dem Boden, Körper in einer Linie, Bauch für 45 sek. anspannen.",
+    "sets": 3
+   },
   {
     "id": "beidseitiges-armdruecken",
     "name": "Beidseitiges Armdrücken",
     "type": "exercise",
     "imageUrl": "images/Arme.png",
-    "muscles": ["Bizeps", "Trizeps", "Beine"]
+    "muscles": ["Bizeps", "Trizeps", "Beine"],
+    "description": "Ellenbogen auf die Knie stützen und hände aufeinander legen, Arme abwechselnd hoch und runter drücken und dabei mit der anderen Hand Druck ausüben.",
+    "sets": 3,
+    "reps": 15
   },
   {
     "id": "klimmzuege",
     "name": "Klimmzüge",
     "type": "exercise",
     "imageUrl": "images/Klimmzuege_e.png",
-    "muscles": ["Core", "Bauchmuskeln", "Arme"]
+    "muscles": ["Core", "Bauchmuskeln", "Arme"],
+    "description": "Schulterbreiter Griff, aus hängender Position Kinn über die Stange ziehen, kontrolliert absenken.",
+    "sets": 3,
+    "reps": 6
   },
-    {
+  {
     "id": "klimmzuege_schwer",
     "name": "Klimmzüge schwer",
     "type": "exercise",
     "imageUrl": "images/Klimmzuege_s.png",
     "muscles": ["Core", "Bauchmuskeln", "Arme"],
-    "difficulty": "schwer"
+    "difficulty": "schwer",
+    "description": "Schulterbreiter Griff, aus hängender Position Kinn über die Stange ziehen, kontrolliert absenken.",
+    "sets": 3,
+    "reps": 6
   },
   {
     "id": "situps",
@@ -71,21 +88,30 @@
     "type": "exercise",
     "imageUrl": "images/Situps.png",
     "muscles": ["Core", "Bauchmuskeln"],
-    "difficulty": "leicht"
+    "difficulty": "leicht",
+    "description": "Auf dem Rücken liegen, Beine anheben und Oberkörper Richtung Knie anheben.",
+    "sets": 3,
+    "reps": 20
   },
   {
     "id": "crunches",
     "name": "Crunches",
     "type": "exercise",
     "imageUrl": "images/crunches.png",
-    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
+    "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"],
+    "description": "Auf dem Rücken liegen, Beine anheben und Oberkörper Richtung Knie anheben ohne den Rücken komplett abzurollen.",
+    "sets": 3,
+    "reps": 25
   },
   {
     "id": "321-squads",
     "name": "3-2-1-Squats",
     "type": "exercise",
     "imageUrl": "images/321Squads_e.png",
-    "muscles": ["Beine"]
+    "muscles": ["Beine"],
+    "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
+    "sets": 3,
+    "reps": 12
   },
     {
     "id": "321-squads_schwer",
@@ -93,7 +119,10 @@
     "type": "exercise",
     "imageUrl": "images/321Squads_s.png",
     "muscles": ["Beine"],
-    "difficulty": "schwer"
+    "difficulty": "schwer",
+    "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
+    "sets": 3, 
+    "reps": 12
   },
 
   {
@@ -101,7 +130,10 @@
     "name": "Ausfallschritte",
     "type": "exercise",
     "imageUrl": "images/Lunges_e.png",
-    "muscles": ["Core", "Unterschenkel", "Oberschenkel"]
+    "muscles": ["Core", "Unterschenkel", "Oberschenkel"],
+    "description": "Ausfallschritte: Einen Fuß nach vorne setzen, das hintere Knie Richtung Boden absenken, Oberkörper aufrecht halten. (Sets gelten Pro Bein)",
+    "sets": 3,
+    "reps": 12
   },
     {
     "id": "ausfallschritte_schwer",
@@ -109,21 +141,30 @@
     "type": "exercise",
     "imageUrl": "images/Lunges_s.png",
     "muscles": ["Core", "Unterschenkel", "Oberschenkel"],
-    "difficulty": "schwer"
+    "difficulty": "schwer",
+    "description": "Ausfallschritte: Einen Fuß nach vorne setzen, das hintere Knie Richtung Boden absenken, Oberkörper aufrecht halten (Sets gelten Pro Bein).",
+    "sets": 3,
+    "reps": 12
   },
   {
     "id": "jump-squats",
     "name": "Jump-Squats",
     "type": "exercise",
     "imageUrl": "images/jumpsquads.png",
-    "muscles": ["Oberschenkel", "Unterschenkel", "Core"]
+    "muscles": ["Oberschenkel", "Unterschenkel", "Core"],
+    "description": "Kniebeuge mit Sprung: In die Kniebeuge gehen und explosiv nach oben springen, sanft landen und direkt in die nächste Wiederholung.",
+    "sets": 3,
+    "reps": 12
   },
   {
     "id": "superman",
     "name": "Superman",
     "type": "exercise",
     "imageUrl": "images/superman.png",
-    "muscles": ["Rücken", "Core", "Beine"]
+    "muscles": ["Rücken", "Core", "Beine"],
+    "description": "Auf dem Bauch liegen, Arme und Beine gleichzeitig anheben, kurz halten und wieder absenken.",
+    "sets": 3,
+    "reps": 18
   },
 
   {
@@ -132,28 +173,40 @@
     "type": "exercise",
     "imageUrl": "images/Burpes.png",
     "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
-    "difficulty": "leicht"
+    "difficulty": "leicht",
+    "description": "Burpees: Aus der Hocke in die Liegestützposition springen, Liegestütz machen, zurückspringen und aufstehen.",
+    "sets": 3,
+    "reps": 12
   },
   {
     "id": "mountain-climbers",
     "name": "Mountain Climbers",
     "type": "exercise",
     "imageUrl": "images/mountainclimbers.png",
-    "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
+    "muscles": ["Core", "Schultern", "Beine", "Ausdauer"],
+    "description": "In der Liegestützposition abwechselnd die Knie zur Brust ziehen.",
+    "sets": 3,
+    "reps": "45sek"
   },
   {
     "id": "stepper",
     "name": "Stepper",
     "type": "exercise",
     "imageUrl": "images/stepper.png",
-    "muscles": ["Beine", "Core", "Ausdauer"]
+    "muscles": ["Beine", "Core", "Ausdauer"],
+    "description": "Abwechselnd die Beine anauf den Stepper heben, als ob man auf einer Treppe steigt.",
+    "sets": 3,
+    "reps": "30sek"
   },
   {
     "id": "jumping-jacks",
     "name": "Hampelmänner",
     "type": "exercise",
     "imageUrl": "images/hampelmann.png",
-    "muscles": ["Beine", "Arme", "Core", "Ausdauer"]
+    "muscles": ["Beine", "Arme", "Core", "Ausdauer"],
+    "description": "Mit geschlossenen Füßen starten, gleichzeitig Beine spreizen und Arme über den Kopf führen, zurück.",
+    "sets": 3,
+    "reps": "45sek"
   },
   {
     "id": "pause",
