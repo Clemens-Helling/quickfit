@@ -724,48 +724,54 @@ footer {
 
             // --- Exercise Modal Logic ---
             function openExerciseModal(name, imageUrl, muscles, sets, reps, description) {
-                modalExerciseName.textContent = name;
+    modalExerciseName.textContent = name;
 
-                if (imageUrl) {
-                    modalExerciseImage.src = imageUrl;
-                    modalExerciseImage.alt = `Bild von ${name}`;
-                    modalExerciseImage.style.display = 'block';
-                } else {
-                    modalExerciseImage.src = '';
-                    modalExerciseImage.alt = 'Kein Bild verfügbar';
-                    modalExerciseImage.style.display = 'none';
-                }
-                
-                // Beschreibung, Sätze und Wiederholungen anzeigen
-                let descHtml = "";
-                if (description) {
-                    descHtml += `<p><strong>Beschreibung:</strong> ${description}</p>`;
-                }
-                if (sets || reps) {
-                    descHtml += `<p><strong>Sätze/Wiederholungen:</strong> `;
-                    if (sets) descHtml += `${sets} Sätze`;
-                    if (sets && reps) descHtml += " x ";
-                    if (reps) descHtml += `${reps} Wdh.`;
-                    descHtml += `</p>`;
-                }
-                modalExerciseMusclesHeader.insertAdjacentHTML('afterend', descHtml);
+    // Bild setzen oder ausblenden
+    if (imageUrl) {
+        modalExerciseImage.src = imageUrl;
+        modalExerciseImage.alt = `Bild von ${name}`;
+        modalExerciseImage.style.display = 'block';
+    } else {
+        modalExerciseImage.src = '';
+        modalExerciseImage.alt = 'Kein Bild verfügbar';
+        modalExerciseImage.style.display = 'none';
+    }
 
-                modalExerciseMusclesList.innerHTML = '';
-                if (muscles && Array.isArray(muscles) && muscles.length > 0) {
-                    muscles.forEach(muscle => {
-                        const li = document.createElement('li');
-                        li.textContent = muscle;
-                        modalExerciseMusclesList.appendChild(li);
-                    });
-                    modalExerciseMusclesHeader.style.display = 'block';
-                    modalExerciseMusclesList.style.display = 'block';
-                } else {
-                    modalExerciseMusclesHeader.style.display = 'none';
-                    modalExerciseMusclesList.style.display = 'none';
-                }
-                
-                exerciseModal.style.display = 'block';
-            }
+    // Details-Bereich leeren und neu füllen
+    const detailsDiv = document.getElementById('modalExerciseDetails');
+    detailsDiv.innerHTML = '';
+
+    let descHtml = "";
+    if (description) {
+        descHtml += `<p><strong>Beschreibung:</strong> ${description}</p>`;
+    }
+    if (sets || reps) {
+        descHtml += `<p><strong>Sätze/Wiederholungen:</strong> `;
+        if (sets) descHtml += `${sets} Sätze`;
+        if (sets && reps) descHtml += " x ";
+        if (reps) descHtml += `${reps} Wdh.`;
+        descHtml += `</p>`;
+    }
+    detailsDiv.innerHTML = descHtml;
+
+    // Muskel-Liste füllen oder ausblenden
+    modalExerciseMusclesList.innerHTML = '';
+    if (muscles && Array.isArray(muscles) && muscles.length > 0) {
+        muscles.forEach(muscle => {
+            const li = document.createElement('li');
+            li.textContent = muscle;
+            modalExerciseMusclesList.appendChild(li);
+        });
+        modalExerciseMusclesHeader.style.display = 'block';
+        modalExerciseMusclesList.style.display = 'block';
+    } else {
+        modalExerciseMusclesHeader.style.display = 'none';
+        modalExerciseMusclesList.style.display = 'none';
+    }
+
+    // Modal anzeigen
+    exerciseModal.style.display = 'block';
+}
 
             function closeExerciseModal() {
                 exerciseModal.style.display = 'none';
