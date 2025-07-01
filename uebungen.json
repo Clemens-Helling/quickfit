@@ -3,24 +3,44 @@
     "id": "liegestuetze",
     "name": "Liegestütze",
     "type": "exercise",
-    "imageUrl": "images/liegestütz.png",
+    "imageUrl": "images/Liegestütze_e.png",
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
     "sets": 3,
     "reps": 12,
     "description": "Klassische Übung für Oberkörper und Core."
   },
+    {
+    "id": "liegestuetze_schwer",
+    "name": "Liegestütze schwer",
+    "type": "exercise",
+    "imageUrl": "images/liegestuetze_s.png",
+    "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
+    "sets": 3,
+    "reps": 12,
+    "description": "Klassische Übung für Oberkörper und Core.",
+    "difficulty": "schwer"
+  },
   {
     "id": "kniebeugen",
     "name": "Kniebeugen",
     "type": "exercise",
-    "imageUrl": "images/squads.png",
+    "imageUrl": "images/Squads_e.png",
     "muscles": ["Beine", "Gesäß", "Core"]
   },
+  {
+    "id": "kniebeugen_schwer",
+    "name": "Kniebeugen schwer",
+    "type": "exercise",
+    "imageUrl": "images/Squads_s.png",
+    "muscles": ["Beine", "Gesäß", "Core"],
+    "difficulty": "schwer"
+  },
+  
   {
     "id": "plank",
     "name": "Plank",
     "type": "exercise",
-    "imageUrl": "images/Plank.jpeg",
+    "imageUrl": "images/Plank.png",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"]
   },
   {
@@ -34,14 +54,22 @@
     "id": "klimmzuege",
     "name": "Klimmzüge",
     "type": "exercise",
-    "imageUrl": "images/klimzuege.png",
+    "imageUrl": "images/Klimmzuege_e.png",
     "muscles": ["Core", "Bauchmuskeln", "Arme"]
+  },
+    {
+    "id": "klimmzuege_schwer",
+    "name": "Klimmzüge schwer",
+    "type": "exercise",
+    "imageUrl": "images/Klimmzuege_s.png",
+    "muscles": ["Core", "Bauchmuskeln", "Arme"],
+    "difficulty": "schwer"
   },
   {
     "id": "situps",
     "name": "Sit-ups",
     "type": "exercise",
-    "imageUrl": "images/situps.png",
+    "imageUrl": "images/Situps.png",
     "muscles": ["Core", "Bauchmuskeln"],
     "difficulty": "leicht"
   },
@@ -56,16 +84,32 @@
     "id": "321-squads",
     "name": "3-2-1-Squats",
     "type": "exercise",
-    "imageUrl": "images/321-squads.jpeg",
+    "imageUrl": "images/321Squads_e.png",
     "muscles": ["Beine"]
+  },
+    {
+    "id": "321-squads_schwer",
+    "name": "3-2-1-Squats schwer",
+    "type": "exercise",
+    "imageUrl": "images/321Squads_s.png",
+    "muscles": ["Beine"],
+    "difficulty": "schwer"
   },
 
   {
     "id": "ausfallschritte",
     "name": "Ausfallschritte",
     "type": "exercise",
-    "imageUrl": "images/ausfallschritte.png",
+    "imageUrl": "images/Lunges_e.png",
     "muscles": ["Core", "Unterschenkel", "Oberschenkel"]
+  },
+    {
+    "id": "ausfallschritte_schwer",
+    "name": "Ausfallschritte schwer",
+    "type": "exercise",
+    "imageUrl": "images/Lunges_s.png",
+    "muscles": ["Core", "Unterschenkel", "Oberschenkel"],
+    "difficulty": "schwer"
   },
   {
     "id": "jump-squats",
@@ -86,7 +130,7 @@
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
-    "imageUrl": "images/burpes.png",
+    "imageUrl": "images/Burpes.png",
     "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
     "difficulty": "leicht"
   },
@@ -94,21 +138,21 @@
     "id": "mountain-climbers",
     "name": "Mountain Climbers",
     "type": "exercise",
-    "imageUrl": "images/mountainclibers.png",
+    "imageUrl": "images/mountainclimbers.png",
     "muscles": ["Core", "Schultern", "Beine", "Ausdauer"]
   },
   {
-    "id": "high-knees",
-    "name": "High Knees",
+    "id": "stepper",
+    "name": "Stepper",
     "type": "exercise",
-    "imageUrl": "images/highknees.jpg",
+    "imageUrl": "images/stepper.png",
     "muscles": ["Beine", "Core", "Ausdauer"]
   },
   {
     "id": "jumping-jacks",
     "name": "Hampelmänner",
     "type": "exercise",
-    "imageUrl": "images/hampelman.png",
+    "imageUrl": "images/hampelmann.png",
     "muscles": ["Beine", "Arme", "Core", "Ausdauer"]
   },
   {
@@ -117,14 +161,6 @@
     "type": "exercise",
     "imageUrl": "images/pause.png",
     "muscles": []
-  },
-    {
-    "id": "burpeesschwer",
-    "name": "Burpees",
-    "type": "exercise",
-    "imageUrl": "images/burpes.png",
-    "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
-    "difficulty": "schwer"
   }
 
 ]
