@@ -723,7 +723,15 @@ footer {
             }
 
             // --- Exercise Modal Logic ---
+            function resetExerciseModalContent() {
+                const descriptionElements = modalExerciseMusclesHeader.parentElement.querySelectorAll('p');
+                descriptionElements.forEach(element => element.remove());
+                modalExerciseMusclesList.innerHTML = '';
+            }
+
             function openExerciseModal(name, imageUrl, muscles, sets, reps, description) {
+                resetExerciseModalContent();
+
                 modalExerciseName.textContent = name;
 
                 if (imageUrl) {
@@ -768,6 +776,7 @@ footer {
             }
 
             function closeExerciseModal() {
+                resetExerciseModalContent();
                 exerciseModal.style.display = 'none';
             }
 
