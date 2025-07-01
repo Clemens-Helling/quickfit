@@ -7,7 +7,8 @@
     "muscles": ["Brust", "Schultern", "Trizeps", "Core"],
     "sets": 3,
     "reps": 15,
-    "description": "Hände schulterbreit unter den Schultern, Körper in einer Linie, Arme beugen und Brust Richtung Boden."
+    "description": "Hände schulterbreit unter den Schultern, Körper in einer Linie, Arme beugen und Brust Richtung Boden.",
+    "difficulty": "einfach"
   },
     {
     "id": "liegestuetze_schwer",
@@ -28,7 +29,8 @@
     "muscles": ["Beine", "Gesäß", "Core"],
     "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
     "sets": 3,
-    "reps": 20
+    "reps": 20,
+    "difficulty": "einfach"
   },
   {
     "id": "kniebeugen_schwer",
@@ -49,7 +51,8 @@
     "imageUrl": "images/Plank.png",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"],
     "description": "Unterarme auf dem Boden, Körper in einer Linie, Bauch für 45 sek. anspannen.",
-    "sets": 3
+    "sets": 3,
+    "difficulty": "einfach"
    },
   {
     "id": "beidseitiges-armdruecken",
@@ -59,7 +62,8 @@
     "muscles": ["Bizeps", "Trizeps", "Beine"],
     "description": "Ellenbogen auf die Knie stützen und hände aufeinander legen, Arme abwechselnd hoch und runter drücken und dabei mit der anderen Hand Druck ausüben.",
     "sets": 3,
-    "reps": 15
+    "reps": 15,
+    "difficulty": "einfach"
   },
   {
     "id": "klimmzuege",
@@ -69,7 +73,8 @@
     "muscles": ["Core", "Bauchmuskeln", "Arme"],
     "description": "Schulterbreiter Griff, aus hängender Position Kinn über die Stange ziehen, kontrolliert absenken.",
     "sets": 3,
-    "reps": 6
+    "reps": 6,
+    "difficulty": "einfach"
   },
   {
     "id": "klimmzuege_schwer",
@@ -101,7 +106,8 @@
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"],
     "description": "Auf dem Rücken liegen, Beine anheben und Oberkörper Richtung Knie anheben ohne den Rücken komplett abzurollen.",
     "sets": 3,
-    "reps": 25
+    "reps": 25,
+    "difficulty": "einfach"
   },
   {
     "id": "321-squads",
@@ -111,7 +117,8 @@
     "muscles": ["Beine"],
     "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
     "sets": 3,
-    "reps": 12
+    "reps": 12,
+    "difficulty": "einfach"
   },
     {
     "id": "321-squads_schwer",
@@ -133,7 +140,8 @@
     "muscles": ["Core", "Unterschenkel", "Oberschenkel"],
     "description": "Ausfallschritte: Einen Fuß nach vorne setzen, das hintere Knie Richtung Boden absenken, Oberkörper aufrecht halten. (Sets gelten Pro Bein)",
     "sets": 3,
-    "reps": 12
+    "reps": 12,
+    "difficulty": "einfach"
   },
     {
     "id": "ausfallschritte_schwer",
@@ -154,7 +162,8 @@
     "muscles": ["Oberschenkel", "Unterschenkel", "Core"],
     "description": "Kniebeuge mit Sprung: In die Kniebeuge gehen und explosiv nach oben springen, sanft landen und direkt in die nächste Wiederholung.",
     "sets": 3,
-    "reps": 12
+    "reps": 12,
+    "difficulty": "einfach"
   },
   {
     "id": "superman",
@@ -164,7 +173,8 @@
     "muscles": ["Rücken", "Core", "Beine"],
     "description": "Auf dem Bauch liegen, Arme und Beine gleichzeitig anheben, kurz halten und wieder absenken.",
     "sets": 3,
-    "reps": 18
+    "reps": 18,
+    "difficulty": "einfach"
   },
 
   {
@@ -186,7 +196,8 @@
     "muscles": ["Core", "Schultern", "Beine", "Ausdauer"],
     "description": "In der Liegestützposition abwechselnd die Knie zur Brust ziehen.",
     "sets": 3,
-    "reps": "45sek"
+    "reps": "45sek",
+    "difficulty": "einfach"
   },
   {
     "id": "stepper",
@@ -196,7 +207,8 @@
     "muscles": ["Beine", "Core", "Ausdauer"],
     "description": "Abwechselnd die Beine anauf den Stepper heben, als ob man auf einer Treppe steigt.",
     "sets": 3,
-    "reps": "30sek"
+    "reps": "30sek",
+    "difficulty": "einfach"
   },
   {
     "id": "jumping-jacks",
@@ -206,14 +218,16 @@
     "muscles": ["Beine", "Arme", "Core", "Ausdauer"],
     "description": "Mit geschlossenen Füßen starten, gleichzeitig Beine spreizen und Arme über den Kopf führen, zurück.",
     "sets": 3,
-    "reps": "45sek"
+    "reps": "45sek",
+    "difficulty": "einfach"
   },
   {
     "id": "pause",
     "name": "Pause",
     "type": "exercise",
     "imageUrl": "images/pause.png",
-    "muscles": []
+    "muscles": [],
+    "difficulty": "einfach"
   }
 
 ]
