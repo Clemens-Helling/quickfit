@@ -9,7 +9,7 @@
     "reps": 15,
     "description": "Hände schulterbreit unter den Schultern, Körper in einer Linie, Arme beugen und Brust Richtung Boden."
   },
-    {
+  {
     "id": "liegestuetze_schwer",
     "name": "Liegestütze schwer",
     "type": "exercise",
@@ -41,7 +41,6 @@
     "sets": 3,
     "reps": 20
   },
-  
   {
     "id": "plank",
     "name": "Plank",
@@ -49,15 +48,16 @@
     "imageUrl": "images/Plank.png",
     "muscles": ["Core", "Bauchmuskeln", "Rückenstrecker"],
     "description": "Unterarme auf dem Boden, Körper in einer Linie, Bauch für 45 sek. anspannen.",
-    "sets": 3
-   },
+    "sets": 3,
+    "reps": "45sek"
+  },
   {
     "id": "beidseitiges-armdruecken",
     "name": "Beidseitiges Armdrücken",
     "type": "exercise",
     "imageUrl": "images/Arme.png",
     "muscles": ["Bizeps", "Trizeps", "Beine"],
-    "description": "Ellenbogen auf die Knie stützen und hände aufeinander legen, Arme abwechselnd hoch und runter drücken und dabei mit der anderen Hand Druck ausüben.",
+    "description": "Ellenbogen auf die Knie stützen und Hände aufeinander legen, Arme abwechselnd hoch und runter drücken und dabei mit der anderen Hand Druck ausüben.",
     "sets": 3,
     "reps": 15
   },
@@ -113,7 +113,7 @@
     "sets": 3,
     "reps": 12
   },
-    {
+  {
     "id": "321-squads_schwer",
     "name": "3-2-1-Squats schwer",
     "type": "exercise",
@@ -121,10 +121,9 @@
     "muscles": ["Beine"],
     "difficulty": "schwer",
     "description": "Füße schulterbreit, Rücken gerade, Gesäß nach hinten unten absenken, Knie nicht über Zehen schieben.",
-    "sets": 3, 
+    "sets": 3,
     "reps": 12
   },
-
   {
     "id": "ausfallschritte",
     "name": "Ausfallschritte",
@@ -135,7 +134,7 @@
     "sets": 3,
     "reps": 12
   },
-    {
+  {
     "id": "ausfallschritte_schwer",
     "name": "Ausfallschritte schwer",
     "type": "exercise",
@@ -166,7 +165,6 @@
     "sets": 3,
     "reps": 18
   },
-
   {
     "id": "burpees",
     "name": "Burpees",
@@ -194,7 +192,7 @@
     "type": "exercise",
     "imageUrl": "images/stepper.png",
     "muscles": ["Beine", "Core", "Ausdauer"],
-    "description": "Abwechselnd die Beine anauf den Stepper heben, als ob man auf einer Treppe steigt.",
+    "description": "Abwechselnd die Beine auf den Stepper heben, als ob man auf einer Treppe steigt.",
     "sets": 3,
     "reps": "30sek"
   },
@@ -215,5 +213,4 @@
     "imageUrl": "images/pause.png",
     "muscles": []
   }
-
 ]
