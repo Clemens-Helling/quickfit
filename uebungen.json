@@ -169,7 +169,7 @@
     "id": "burpees",
     "name": "Burpees",
     "type": "exercise",
-    "imageUrl": "images/Burpes.png",
+    "imageUrl": "images/burpes.png",
     "muscles": ["Core", "Arme", "Schultern", "Brust", "Gesäß"],
     "difficulty": "leicht",
     "description": "Burpees: Aus der Hocke in die Liegestützposition springen, Liegestütz machen, zurückspringen und aufstehen.",
